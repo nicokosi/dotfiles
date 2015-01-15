@@ -13,6 +13,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
+brew install brew-cask curl git htop-osx jenv lynx maven openssl rmtrash tree wget
 
 exit 0
