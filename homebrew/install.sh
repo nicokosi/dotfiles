@@ -13,6 +13,6 @@ then
 fi
 
 # Install homebrew packages
-brew install brew-cask curl git htop-osx jenv lynx maven openssl rmtrash tree wget tig
+brew install brew-cask curl git htop-osx jenv lynx maven openssl rmtrash tree wget tig boot2docker docker
 
 exit 0
