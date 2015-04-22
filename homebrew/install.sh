@@ -14,6 +14,6 @@ fi
 
 # Install homebrew packages
 brew install brew-cask curl git htop-osx jenv lynx maven openssl rmtrash tree wget tig boot2docker docker \
- Caskroom/cask/virtualbox Caskroom/cask/xmind --with-cocoa --srgb emacs
+ Caskroom/cask/virtualbox Caskroom/cask/xmind --with-cocoa --srgb emacs Caskroom/cask/vagrant
 
 exit 0
