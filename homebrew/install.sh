@@ -13,7 +13,14 @@ then
 fi
 
 # Install homebrew packages
-brew install brew-cask curl git htop-osx jenv lynx maven openssl rmtrash tree wget tig boot2docker docker \
- Caskroom/cask/virtualbox Caskroom/cask/xmind --with-cocoa --srgb emacs Caskroom/cask/vagrant Caskroom/cask/intellij-idea-ce Caskroom/cask/sbt Caskroom/cask/gimp
+
+# "base":
+brew install brew-cask curl htop-osx lynx openssl rmtrash tree wget Caskroom/cask/xmind --with-cocoa --srgb emacs Caskroom/cask/gimp
+
+# virtual machines:
+brew install boot2docker docker Caskroom/cask/virtualbox Caskroom/cask/vagrant
+
+# development:
+brew install git jenv maven tig Caskroom/cask/intellij-idea-ce Caskroom/cask/sbt
 
 exit 0
