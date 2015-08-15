@@ -1,1 +1,1 @@
-/usr/local/share/zsh/site-functions/_lein
+. /usr/local/share/zsh/site-functions/_lein
