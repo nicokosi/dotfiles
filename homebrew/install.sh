@@ -17,7 +17,7 @@ fi
 # "base":
 brew install brew-cask curl htop-osx lynx openssl rmtrash tree wget Caskroom/cask/xmind --with-cocoa --srgb emacs Caskroom/cask/gimp \
  Caskroom/cask/alfred Caskroom/cask/caffeine Caskroom/cask/chromium Caskroom/cask/iterm2 Caskroom/cask/spectacle Caskroom/cask/teamviewer \
- Caskroom/cask/cheatsheet Caskroom/cask/firefox-beta Caskroom/cask/openoffice Caskroom/cask/sublime-text Caskroom/cask/vlc-nightly Caskroom/cask/kobo Caskroom/cask/calibre
+ Caskroom/cask/cheatsheet Caskroom/cask/firefox-beta Caskroom/cask/openoffice Caskroom/cask/sublime-text3 Caskroom/cask/vlc-nightly Caskroom/cask/kobo Caskroom/cask/calibre
  Caskroom/cask/google-chrome
 
 # virtual machines:
