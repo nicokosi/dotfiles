@@ -24,6 +24,6 @@ brew install brew-cask curl htop-osx lynx openssl rmtrash tree wget Caskroom/cas
 brew install boot2docker docker Caskroom/cask/virtualbox Caskroom/cask/vagrant
 
 # development:
-brew install git Caskroom/cask/java Caskroom/cask/java7 Caskroom/cask/java6 jenv maven tig Caskroom/cask/intellij-idea-ce Caskroom/cask/sbt Caskroom/cask/lighttable leiningen
+brew install git Caskroom/cask/java Caskroom/cask/java7 Caskroom/cask/java6 jenv maven tig Caskroom/cask/intellij-idea-ce Caskroom/cask/sbt Caskroom/cask/lighttable leiningen typesafe-activator
 
 exit 0
