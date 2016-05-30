@@ -1,1 +1,0 @@
-. ~/.dotfiles/z/z.sh
