@@ -26,7 +26,7 @@ brew install \
   Caskroom/cask/xmind --with-cocoa --srgb \
   emacs \
   Caskroom/cask/gimp \
-  Caskroom/cask/alfred \
+  # Caskroom/cask/alfred \
   Caskroom/cask/caffeine \
   Caskroom/cask/chromium \
   Caskroom/cask/iterm2 \
