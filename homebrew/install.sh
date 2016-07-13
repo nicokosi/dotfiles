@@ -64,6 +64,6 @@ brew install \
   Caskroom/cask/lighttable \
   leiningen \
   typesafe-activator \
-  Caskroom/cask/postman
-
+  Caskroom/cask/postman \
+  Caskroom/cask/haskell-platform
 exit 0
