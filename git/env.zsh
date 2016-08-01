@@ -1,2 +1,2 @@
-export PATH=$PATH:/opt/hub/bin
+export PATH="$PATH:/opt/hub/bin"
 
