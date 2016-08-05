@@ -16,6 +16,8 @@ vagrant
 arialdomartini/oh-my-git
 EOBUNDLES
 
+export PS1="%~ • "
+
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 antigen-apply
