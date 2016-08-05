@@ -14,6 +14,7 @@ gitignore
 history
 vagrant
 arialdomartini/oh-my-git
+zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
 export PS1="%~ • "
