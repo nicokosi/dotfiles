@@ -1,7 +1,9 @@
-.DS_Store
-*~
-*.swp
 
 ## jEnv configuration #
 #######################
 .java-version
+
+## Maven Profiler #
+###################
+.profiler/
+
