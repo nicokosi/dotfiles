@@ -12,6 +12,7 @@ history
 vagrant
 rupa/z
 arialdomartini/oh-my-git
+zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
