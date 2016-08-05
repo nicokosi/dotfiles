@@ -1,0 +1,3 @@
+syntax on
+set backupdir=/tmp
+set directory=/tmp
