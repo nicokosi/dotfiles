@@ -15,6 +15,7 @@ history
 vagrant
 arialdomartini/oh-my-git
 zsh-users/zsh-syntax-highlighting
+rupa/z
 EOBUNDLES
 
 export PS1="%~ • "
