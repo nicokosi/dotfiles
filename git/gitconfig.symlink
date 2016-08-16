@@ -30,3 +30,5 @@
         keepTemporaries = false
         prompt = false
 
+[status]
+        showUntrackedFiles = all
