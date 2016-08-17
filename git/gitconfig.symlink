@@ -1,25 +1,16 @@
-[user]
-        name = Nicolas Kosinski
-        email = nicolas.kosinski@vidal.fr
-[credential]
-        helper = cache
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
 [color]
         ui = true
+
 [core]
         editor = vim
         autocrlf = input
         excludesfile = /home/nkosinski/.gitignore
-[alias]
-        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-[pull]
-        rebase = preserve
-[push]
-        default = upstream
-[rebase]
-        autostash = true
-        autosquash = true
-[rerere]
-        enabled = true
+
+[credential]
+        helper = cache
 
 [merge]
         conflictStyle = diff3
@@ -29,6 +20,23 @@
         keepBackup = false
         keepTemporaries = false
         prompt = false
+
+[pull]
+        rebase = preserve
+
+[push]
+        default = upstream
+
+[rebase]
+        autostash = true
+        autosquash = true
+
+[rerere]
+        enabled = true
+
+[user]
+        name = Nicolas Kosinski
+        email = nicolas.kosinski@vidal.fr
 
 [status]
         showUntrackedFiles = all
