@@ -1,13 +1,3 @@
-# Sample gitconfig
-#
-
-[hub]
-        protocol = https
-[user]
-        name = Nicolas Kosinski
-        email = nicokosi@yahoo.com
-[credential]
-        helper = osxkeychain
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
@@ -19,21 +9,30 @@
         status = auto
         branch = auto
         ui = true
+
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-	ignorecase = false
-[apply]
-        whitespace = nowarn
-[mergetool]
-        keepBackup = false
+        ignorecase = false
+
+[credential]
+        helper = osxkeychain
+
 [difftool]
         prompt = false
+
 [help]
         autocorrect = 1
+
+[hub]
+        protocol = https
+
+[mergetool]
+        keepBackup = false
+
 [push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to surpress warning message
         default = simple
+
+[user]
+        name = Nicolas Kosinski
+        email = nicokosi@yahoo.com
