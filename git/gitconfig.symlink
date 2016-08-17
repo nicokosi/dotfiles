@@ -33,6 +33,10 @@
 [push]
         default = simple
 
+[rebase]
+        autostash = true
+        autosquash = true
+
 [user]
         name = Nicolas Kosinski
         email = nicokosi@yahoo.com
