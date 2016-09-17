@@ -66,5 +66,7 @@ brew install \
   leiningen \
   typesafe-activator \
   Caskroom/cask/postman \
-  Caskroom/cask/haskell-platform
+  Caskroom/cask/haskell-platform \
+  homebrew/science/r
+
 exit 0
