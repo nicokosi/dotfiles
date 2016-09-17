@@ -49,7 +49,6 @@ brew install \
   docker \
   Caskroom/cask/virtualbox \
   Caskroom/cask/vagrant \
-  Caskroom/cask/docker-toolbox
 
 # development:
 brew install \
