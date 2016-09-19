@@ -36,7 +36,7 @@ brew install \
   Caskroom/versions/firefox-beta \
   Caskroom/cask/openoffice \
   Caskroom/versions/sublime-text \
-  Caskroom/versions/vlc-nightly \
+  Caskroom/versions/vlc \
   Caskroom/cask/kobo \
   Caskroom/cask/calibre \
   Caskroom/cask/google-chrome \
