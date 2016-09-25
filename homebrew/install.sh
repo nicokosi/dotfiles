@@ -43,7 +43,8 @@ brew install \
   Caskroom/cask/disk-inventory-x \
   htop \
   httpie \
-  httpstat
+  httpstat \
+  ag
 
 # virtual machines:
 brew install \
