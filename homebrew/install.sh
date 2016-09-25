@@ -42,7 +42,8 @@ brew install \
   Caskroom/cask/google-chrome \
   Caskroom/cask/disk-inventory-x \
   htop \
-  httpie
+  httpie \
+  httpstat
 
 # virtual machines:
 brew install \
