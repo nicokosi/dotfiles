@@ -30,6 +30,7 @@ brew 'typesafe-activator'
 brew 'wget'
 
 cask 'alfred'
+cask 'atom'
 cask 'audacity'
 cask 'caffeine'
 cask 'calibre'
