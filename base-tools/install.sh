@@ -5,4 +5,4 @@ apt-get install sublime-text
 apt-get install terminator
 apt-get install tree
 apt-get install zip
-apt-get install glipper
+apt-get install diodon
