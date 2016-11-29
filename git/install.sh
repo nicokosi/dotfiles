@@ -5,3 +5,6 @@ npm install -g diff-so-fancy
 # Command line tool that audits all GitHub repositories:
 go install github.com/jessfraz/audit
 
+# Command line tool that protects branches of all GitHub repositories:
+go install github.com/jcgay/protector
+
