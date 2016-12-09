@@ -19,7 +19,7 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gap="git add --patch"
 
+alias gpf='git push --force-with-lease'
 alias git-delete-merged-local-branches="git branch -d \$(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n')"
 alias git-audit-all-github-repos="audit"
 alias git-protect-github-branches="protector"
-
