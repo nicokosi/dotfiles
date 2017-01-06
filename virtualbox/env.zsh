@@ -1,2 +1,1 @@
-export VBOX_USER_HOME="/media/nkosinski/DATAPART1/VirtualBox VMs"
-
+export VBOX_USER_HOME="/mnt/hdd2/VirtualBox VMs"

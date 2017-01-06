@@ -1,2 +1,1 @@
-export VAGRANT_HOME=/media/nkosinski/DATAPART1/.vagrant.d/
-
+export VAGRANT_HOME="/mnt/hdd2/.vagrant.d"
