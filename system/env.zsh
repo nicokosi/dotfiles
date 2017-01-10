@@ -10,3 +10,6 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Do not prompt for SSH keys
+ssh-add -A
