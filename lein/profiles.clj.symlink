@@ -1,0 +1,3 @@
+{:user {:dependencies[
+        [eftest "0.1.3"] ; Fast and pretty Clojure test runner (https://github.com/weavejester/eftest)
+    ]}}
