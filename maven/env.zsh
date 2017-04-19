@@ -1,1 +1,1 @@
-export PATH="$PATH:/opt/apache-maven-3.3.9/bin"
+export PATH="$PATH:/opt/apache-maven-3.5.0/bin"
