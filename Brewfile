@@ -5,6 +5,7 @@ tap 'homebrew/science'
 tap 'jcgay/jcgay'
 
 brew 'ag'
+brew 'ctop'
 brew 'curl'
 brew 'diff-so-fancy'
 brew 'docker'
