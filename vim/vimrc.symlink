@@ -1,6 +1,4 @@
-syntax on
+autocmd FileType gitcommit setlocal spell
 set backupdir=/tmp
 set directory=/tmp
 set number
-set spell spelllang=en_us
-
