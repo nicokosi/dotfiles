@@ -5,6 +5,7 @@ tap 'homebrew/science'
 tap 'jcgay/jcgay'
 
 brew 'ag'
+brew 'apache-spark'
 brew 'clamav'
 brew 'ctop'
 brew 'curl'
