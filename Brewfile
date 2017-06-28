@@ -24,6 +24,7 @@ brew 'jenv'
 brew 'leiningen'
 brew 'lynx'
 brew 'maven-deluxe'
+brew 'mas'
 brew 'node'
 brew 'openssl'
 brew 'r-gui'
@@ -63,3 +64,11 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'vlc'
 cask 'xmind'
+
+mas "iMovie", id: 408981434
+mas "iPhoto", id: 408981381
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
