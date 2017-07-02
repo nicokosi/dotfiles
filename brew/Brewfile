@@ -1,7 +1,11 @@
 cask_args appdir: '/Applications'
 
+tap 'caskroom/cask'
+tap 'caskroom/versions'
 tap 'homebrew/bundle'
+tap 'homebrew/core'
 tap 'homebrew/science'
+tap 'homebrew/services'
 tap 'jcgay/jcgay'
 
 brew 'ag'
