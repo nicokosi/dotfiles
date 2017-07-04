@@ -27,6 +27,7 @@ brew "hugo"
 brew "jenv"
 brew "leiningen"
 brew "lynx"
+brew "macvim", args: ['override-system-vim']
 brew "maven-deluxe"
 brew "mas"
 brew "mysql"
