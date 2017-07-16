@@ -8,3 +8,6 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+
+alias upgrade="echo '\033[0;34mUpgrade shell (oh my zsh) and apps (via brew)\033[0m' && antigen update && brew-upgrades"
