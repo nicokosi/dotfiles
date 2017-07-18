@@ -5,16 +5,30 @@
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
 [color]
-        diff = auto
+        #diff = auto
         status = auto
         branch = auto
         ui = true
+
+[color "diff"]
+        meta = 227
+        frag = magenta bold
+        commit = 227 bold
+        old = red bold
+        new = green bold
+        whitespace = red reverse
+
+[color "diff-highlight"]
+        oldNormal = red bold
+        oldHighlight = red bold 52
+        newNormal = green bold
+        newHighlight = green bold 22
 
 [core]
         excludesfile = ~/.gitignore
         editor = vim
         ignorecase = false
-	pager = diff-so-fancy | less --tabs=4 -RFX
+        pager = diff-so-fancy | less --tabs=4 -RFX
 
 [credential]
         helper = osxkeychain
