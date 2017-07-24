@@ -1,2 +1,1 @@
-export DOCKER_API_VERSION="1.22"
-
+export DOCKER_API_VERSION="1.30"
