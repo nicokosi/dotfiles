@@ -81,6 +81,7 @@ cask "virtualbox"
 cask "vlc"
 cask "xmind"
 
+mas "Amphetamine", id: 937984704
 mas "iMovie", id: 408981434
 mas "iPhoto", id: 408981381
 mas "Keynote", id: 409183694
