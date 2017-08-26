@@ -12,13 +12,13 @@ check-viruses() {
 
   if [ ! -z "$1" ]; then
     echo-in-blue "Scanning $1..."
-    clamscan --bell --infected --recursive $1
+    sudo clamscan --bell --infected --recursive $1
     echo-in-green "Analyzed folder $1"
   else
     echo-in-blue "Scanning root dir..."
     for folder in `find / -maxdepth 1 -type d -print | grep -v "^/$"`
     do
-      clamscan --bell --infected --recursive $folder
+      sudo clamscan --bell --infected --recursive $folder
       echo-in-green "Analyzed folder $folder"
     done
   fi
