@@ -18,6 +18,10 @@ add-apt-repository \
    stable"
 apt-get update
 
-echo "${GREEN}Install docker-ce and docker-compose${NO_COLOR}:"
+echo "${GREEN}Install docker-ce${NO_COLOR}:"
 apt-get install docker-ce
-apt-get install docker-compose
+
+echo "${GREEN}Install docker-compose${NO_COLOR}:"
+dockerComposeVersion="1.16.1"
+curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname
+-s`-`uname -m` -o /usr/local/bin/docker-compose
