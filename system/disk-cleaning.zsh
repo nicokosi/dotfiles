@@ -26,6 +26,9 @@ docker rm `docker ps -a -q`
   rm -r /home/nkosinski/work/api-installer/bin
   rm -r /home/nkosinski/work/perceval-installer/bin
 
+  echo "Spark cleanup..."
+  rm -r /opt/spark-2.1.1-bin-hadoop2.3/work/*
+
   echo "Space after cleanup:"
   df -h | grep "/dev/sd"
 }
