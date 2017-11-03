@@ -8,3 +8,5 @@
 # maven-profiler
 .profiler
 
+# IntelliJ IDEA
+*.iml
