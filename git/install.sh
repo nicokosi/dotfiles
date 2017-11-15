@@ -13,3 +13,5 @@ add-apt-repository ppa:git-core/ppa
 
 # Command line tool for launching multiple git commands in parallel
 go install github.com/jcgay/parallel-git-repo
+
+apt-get install tig
