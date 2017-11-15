@@ -2,4 +2,5 @@
 apm install \
   language-docker \
   language-rust \
-  linter-docker
+  linter-docker \
+  teletype
