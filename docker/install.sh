@@ -25,3 +25,9 @@ echo "${GREEN}Install docker-compose${NO_COLOR}:"
 dockerComposeVersion="1.16.1"
 curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname
 -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+# Fix "must run as sudo" issue:
+groupadd docker
+gpasswd -a ${USER} docker
+service docker restart
+
