@@ -15,3 +15,6 @@ add-apt-repository ppa:git-core/ppa
 go install github.com/jcgay/parallel-git-repo
 
 apt-get install tig
+
+# Install 'hub' command-line for github
+go get github.com/github/hub
