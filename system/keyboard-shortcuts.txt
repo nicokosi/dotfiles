@@ -1,0 +1,4 @@
+# My personal changes to Ubuntu keyboard shortcuts
+
+# System / Log out: Super+L (instead of Ctrl+Alt+L)
+
