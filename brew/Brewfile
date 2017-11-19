@@ -30,6 +30,7 @@ brew "jenv"
 brew "leiningen"
 brew "loc"
 brew "lynx"
+brew "m-cli"
 brew "macvim", args: ['override-system-vim']
 brew "mas"
 brew "maven-deluxe"
