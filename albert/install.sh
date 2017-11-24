@@ -2,9 +2,9 @@ sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r
 apt-get update
 apt-get install albert
 
-git clone git@github.com:albertlauncher/external.git "$HOME/.local/share/albert/external/"
-
+echo "Installing albert extensions..."
 extensions_dir="$HOME/.local/share/albert/org.albert.extension.externalextensions/extensions"
+git clone git@github.com:albertlauncher/external.git $entensions_dir
 
 # Add 'spell' extension (usage example: 'spell en great')
 echo "Installing 'spell' dependencies..."
@@ -17,3 +17,8 @@ echo "Installing 'spell' extension..."
 mkdir --parents $extensions_dir
 wget "https://raw.githubusercontent.com/albertlauncher/external/master/spell.py" --directory-prefix $extensions_dir
 chmod +x "$extensions_dir/spell.py"
+
+# Add 'copyq' extension
+wget "https://raw.githubusercontent.com/albertlauncher/external/master/copyq.sh" --directory-prefix $extensions_dir
+chmod +x "$extensions_dir/copyq.sh"
+
