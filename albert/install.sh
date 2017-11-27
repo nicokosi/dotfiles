@@ -1,4 +1,8 @@
 sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_17.10/ /' > /etc/apt/sources.list.d/albert.list"
+
+wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_17.10/Release.key -O /tmp/albert-install/Release.key
+apt-key add - < /tmp/albert-install/Release.key
+
 apt-get update
 apt-get install albert
 
