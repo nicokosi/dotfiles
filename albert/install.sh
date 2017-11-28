@@ -26,3 +26,5 @@ chmod +x "$extensions_dir/spell.py"
 wget "https://raw.githubusercontent.com/albertlauncher/external/master/copyq.sh" --directory-prefix $extensions_dir
 chmod +x "$extensions_dir/copyq.sh"
 
+# Launch Albert on startup
+cp /usr/share/applications/albert.desktop $HOME/.config/autostart/ && chmod +x $HOME/.config/autostart/albert.desktop
