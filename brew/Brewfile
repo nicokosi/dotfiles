@@ -9,6 +9,7 @@ tap "jcgay/jcgay"
 
 brew "ag"
 brew "apache-spark"
+brew "cheat"
 brew "clamav"
 brew "ctop"
 brew "curl"
