@@ -11,13 +11,16 @@ disk-cleanup() {
 
   echo "Maven cleanup (remove files from local repo)..."
   echo "  in local repo..."
-  rm -r /Users/nicolas/.m2/repository/com/vidal/**/*installer
-  rm -r /Users/nicolas/.m2/repository/com/vidal/merlin/vxp-indexer
-  rm -r /Users/nicolas/.m2/repository/com/vidal/merlin/native
-  rm -r /Users/nicolas/.m2/repository/com/vidal/merlin/data
+  rm -r /Users/nicolas/.m2/repository/com/vidal
   echo "  clean Vidal projects..."
   cd ~/work/vidal
-  for project in `ls`; mvn clean -q -f $project/pom.xml
+  for project in `ls`
+  do
+    if [[ -a $project/pom.xml ]]
+    then
+      mvn -q -f $project/pom.xml clean
+    fi
+  done
   echo "Maven cleanup ✅\n"
 
   echo "Misc file cleanup..."
