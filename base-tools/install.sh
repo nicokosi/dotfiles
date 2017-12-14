@@ -8,7 +8,8 @@ apt-get install \
   zip \
   diodon \
   xmind \
-  trash-cli
+  trash-cli \
+  htop
 
 wget https://github.com/bcicen/ctop/releases/download/v0.6.1/ctop-0.6.1-linux-amd64 -O /usr/local/bin/ctop
 chmod +x /usr/local/bin/ctop
