@@ -36,6 +36,7 @@ brew "m-cli"
 brew "macvim", args: ['override-system-vim']
 brew "mas"
 brew "maven-deluxe"
+brew "mycli"
 brew "mysql"
 brew "node"
 brew "openssl"
