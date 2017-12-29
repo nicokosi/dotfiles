@@ -6,16 +6,17 @@ antigen use oh-my-zsh
 
 # Plugins
 antigen-bundles <<EOBUNDLES
-git
+arialdomartini/oh-my-git
 brew
 docker
-mvn
-gitignore
 history
-vagrant
-arialdomartini/oh-my-git
-zsh-users/zsh-syntax-highlighting
+git
+git-extras
+gitignore
+mvn
 rupa/z
+vagrant
+zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
 export PS1="%~ • "
