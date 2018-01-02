@@ -5,8 +5,7 @@ disk-cleanup() {
   echo "Docker cleanup..."
   sudo docker system prune --all --force
   docker rmi --force $(docker images --all --quiet)
-  docker rm --force $(docker ps --all --quiet)
-docker rm `docker ps -a -q`
+  docker rm --volumes --force $(docker ps --all --quiet)
   #rm -r /var/lib/docker/aufs/diff
   echo "✅"
 
@@ -20,7 +19,6 @@ docker rm `docker ps -a -q`
   mvn clean -f /home/nkosinski/work/api-installer
   mvn clean -f /home/nkosinski/work/cdrom-installer
   mvn clean -f /home/nkosinski/work/perceval-installer
-  trash-put /home/nkosinski/work
   sudo /opt/apache-maven-3.3.9/bin/mvn clean -f /home/nkosinski/work/zapi-sdk
   echo "✅"
 
