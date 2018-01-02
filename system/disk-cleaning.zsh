@@ -25,6 +25,7 @@ disk-cleanup() {
   echo "Misc file cleanup..."
   rm -r /home/nkosinski/work/api-installer/bin
   rm -r /home/nkosinski/work/perceval-installer/bin
+  rm -r /home/nkosinski/work/perceval-installer/work
 
   echo "Spark cleanup..."
   rm -r /opt/spark-2.1.1-bin-hadoop2.3/work/*
