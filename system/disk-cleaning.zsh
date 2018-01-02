@@ -19,6 +19,8 @@ docker rm `docker ps -a -q`
   echo "  clean installer projects..."
   mvn clean -f /home/nkosinski/work/api-installer
   mvn clean -f /home/nkosinski/work/cdrom-installer
+  mvn clean -f /home/nkosinski/work/perceval-installer
+  trash-put /home/nkosinski/work
   sudo /opt/apache-maven-3.3.9/bin/mvn clean -f /home/nkosinski/work/zapi-sdk
   echo "✅"
 
