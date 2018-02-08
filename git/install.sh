@@ -1,5 +1,5 @@
 # Command line tool that enhances 'git diff':
-apt-get install npm
+apt install npm
 npm install -g diff-so-fancy
 
 # Command line tool that audits all GitHub repositories:
@@ -14,7 +14,7 @@ add-apt-repository ppa:git-core/ppa
 # Command line tool for launching multiple git commands in parallel
 go install github.com/jcgay/parallel-git-repo
 
-apt-get install tig
+apt install tig
 
 # Install 'hub' command-line for github
 go get github.com/github/hub

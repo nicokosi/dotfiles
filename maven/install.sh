@@ -1,1 +1,1 @@
-apt-get install maven
+apt install maven

@@ -11,4 +11,4 @@ fi
 
 alias open="xdg-open"
 
-alias apt-all-upgrades="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoclean"
+alias apt-all-upgrades="sudo apt update && sudo apt upgrade && sudo apt-get dist-upgrade && sudo apt-get autoclean"

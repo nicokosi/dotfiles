@@ -2,7 +2,7 @@ GREEN='\033[0;32m'
 NO_COLOR='\033[0m'
 
 echo "${GREEN}Install packages to allow apt to use a repository over HTTPS${NO_COLOR}:"
-apt-get install \
+apt install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -16,10 +16,10 @@ add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
-apt-get update
+apt update
 
 echo "${GREEN}Install docker-ce${NO_COLOR}:"
-apt-get install docker-ce
+apt install docker-ce
 
 echo "${GREEN}Install docker-compose${NO_COLOR}:"
 dockerComposeVersion="1.16.1"
