@@ -3,8 +3,8 @@ sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r
 wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_17.10/Release.key -O /tmp/albert-install/Release.key
 apt-key add - < /tmp/albert-install/Release.key
 
-apt-get update
-apt-get install albert
+apt update
+apt install albert
 
 echo "Installing albert extensions..."
 extensions_dir="$HOME/.local/share/albert/org.albert.extension.externalextensions/extensions"

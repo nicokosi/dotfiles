@@ -1,1 +1,1 @@
-apt-get install compizconfig-settings-manager compiz-plugins
+apt install compizconfig-settings-manager compiz-plugins

@@ -1,5 +1,5 @@
 apt-add-repository ppa:diodon-team/stable
-apt-get \
+apt install \
   diodon \
   htop \
   httpie \

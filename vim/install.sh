@@ -1,1 +1,1 @@
-sudo apt-get install vim
+sudo apt install vim

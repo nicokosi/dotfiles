@@ -1,4 +1,4 @@
-apt-get install atom
+apt install atom
 
 apm install \
   language-scala \

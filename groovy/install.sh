@@ -1,1 +1,1 @@
-apt-get install groovy
+apt install groovy
