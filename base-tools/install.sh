@@ -4,6 +4,7 @@ apt install \
   htop \
   httpie \
   install \
+  shellcheck \
   silversearcher-ag \
   sublime-text \
   terminator \
