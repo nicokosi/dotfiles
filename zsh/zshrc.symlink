@@ -38,3 +38,7 @@ unset config_files
 
 # Temporary fix for "fatal" log when not in git repo: "fatal: BUG: setup_git_env called without repository"
 source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-arialdomartini-SLASH-oh-my-git.git/base.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/nkosinski/.sdkman"
+[[ -s "/home/nkosinski/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nkosinski/.sdkman/bin/sdkman-init.sh"
