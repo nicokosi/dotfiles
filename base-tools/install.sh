@@ -5,6 +5,7 @@ apt install \
   htop \
   httpie \
   install \
+  p7zip \
   shellcheck \
   silversearcher-ag \
   sublime-text \
