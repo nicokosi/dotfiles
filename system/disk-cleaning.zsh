@@ -18,7 +18,7 @@ disk-cleanup() {
   do
     if [[ -a $project/pom.xml ]]
     then
-      mvn -q -f $project/pom.xml clean
+      mvn-vidal -q -f $project/pom.xml clean
     fi
   done
   echo "Maven cleanup ✅\n"
