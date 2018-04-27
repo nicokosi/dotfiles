@@ -10,9 +10,6 @@ arialdomartini/oh-my-git
 brew
 docker
 history
-git
-git-extras
-gitignore
 mvn
 rupa/z
 vagrant
