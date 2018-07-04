@@ -1,1 +1,4 @@
-apt install maven
+#!/bin/bash
+. $HOME/.sdkman/bin/sdkman-init.sh
+sdk install maven
+
