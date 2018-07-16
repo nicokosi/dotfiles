@@ -15,11 +15,8 @@ disk-cleanup() {
   rm -r /home/nkosinski/.m2/repository/com/vidal/merlin/vxp-indexer
   rm -r /home/nkosinski/.m2/repository/com/vidal/merlin/native
   rm -r /home/nkosinski/.m2/repository/com/vidal/merlin/data
-  echo "  clean installer projects..."
-  mvn clean -f /home/nkosinski/work/api-installer
-  mvn clean -f /home/nkosinski/work/cdrom-installer
-  mvn clean -f /home/nkosinski/work/perceval-installer
-  sudo /opt/apache-maven-3.3.9/bin/mvn clean -f /home/nkosinski/work/zapi-sdk
+  echo "  clean all Vidal Maven projects..."
+  for pom in ~/work/*/pom.xml; mvn clean -f $pom
   echo "✅"
 
   echo "Misc file cleanup..."
