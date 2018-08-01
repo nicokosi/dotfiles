@@ -3,7 +3,7 @@ disk-cleanup() {
   df -h | grep "/dev/sd"
 
   echo "Docker cleanup..."
-  sudo docker system prune --all --force
+  sudo docker system prune --all --force --volumes
   docker rmi --force $(docker images --all --quiet)
   docker rm --volumes --force $(docker ps --all --quiet)
   #rm -r /var/lib/docker/aufs/diff
