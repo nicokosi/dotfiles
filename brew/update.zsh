@@ -24,7 +24,6 @@ brew-upgrades() {
 
   echo-in-blue "Cleanup"
   brew cleanup
-  brew cask cleanup
 
   echo-in-green "Done!"
 }
