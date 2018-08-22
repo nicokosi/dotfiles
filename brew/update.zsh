@@ -3,7 +3,6 @@ echo-in() { #args= color, text
   echo "${1}${2}${NO_COLOR}"
 }
 echo-in-blue() { echo-in "\033[0;34m" $1}
-echo-in-green() { echo-in "\033[0;92m" $1}
 
 brew-upgrades() {
   echo-in-blue "Upgrading brew"
@@ -22,8 +21,8 @@ brew-upgrades() {
     fi
   done
 
-  echo-in-blue "Cleanup"
+  echo "Cleanup"
   brew cleanup
 
-  echo-in-green "Done!"
+  echo "Done!"
 }
