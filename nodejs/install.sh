@@ -1,2 +1,2 @@
-curl -sL https://deb.nodesource.com/setup_9.x | bash -
-apt install nodejs
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+apt install -y nodejs
