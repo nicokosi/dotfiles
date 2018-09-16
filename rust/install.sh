@@ -9,5 +9,5 @@ rustup run nightly-2016-08-01 cargo install --git https://github.com/murarth/rus
 rustup component add rustfmt-preview
 
 # Install clippy, 'a bunch of lints to catch common mistakes and improve your Rust code'
-rustup update nightly
-rustup run nightly cargo install --force clippy
+rustup update
+rustup component add clippy-preview
