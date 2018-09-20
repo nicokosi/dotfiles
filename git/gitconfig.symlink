@@ -1,9 +1,27 @@
 [alias]
+        a = add
+        aa = add --all
+        ap = add --patch
+        c = commit
+        b = branch
+        br = branch --remote
+        ca = commit -a
+        cb = copy-branch-name
         co = checkout
+        d = diff
+        f = fetch --prune
+        l = pull --prune
+        log = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        p = push origin HEAD
+        pf = push --force-with-lease
+        s = status
+        st = status
+
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+
 [color]
         #diff = auto
         status = auto
