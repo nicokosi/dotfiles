@@ -2,6 +2,7 @@ apt-add-repository ppa:diodon-team/stable
 apt install \
   diodon \
   ditaa \
+  gist \
   htop \
   httpie \
   install \
