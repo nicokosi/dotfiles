@@ -7,6 +7,7 @@
         br = branch --remote
         ca = commit -a
         cb = copy-branch-name
+        cf = commit --fixup
         co = checkout
         d = diff
         f = fetch --prune
