@@ -9,6 +9,7 @@
         cb = copy-branch-name
         cf = commit --fixup
         co = checkout
+        cp = cherry-pick
         d = diff
         f = fetch --prune
         l = pull --prune
