@@ -22,7 +22,6 @@ brew-upgrades() {
   done
 
   echo "Cleanup"
-  brew cleanup
-
+  brew cleanup -s
   echo "Done!"
 }

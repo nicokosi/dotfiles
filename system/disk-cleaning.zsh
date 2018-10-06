@@ -28,6 +28,9 @@ disk-cleanup() {
   rm -r /Users/nicolas/work/vidal/perceval-installer/bin
   echo "Misc file cleanup ✅\n"
 
+  echo "SDKMAN! cleanup..."
+  sdk flush archives && sdk flush broadcast && sdk flush temp
+
   echo "Space after cleanup:"
   df -h | grep "/dev/disk1"
 }
