@@ -5,9 +5,9 @@ echo-in() { #args= color, text
 echo-in-light-cyan() { echo-in "\033[0;96m" $1}
 
 update-all() {
- 	echo-in-light-cyan "Homebrew updates..."
+	echo-in-light-cyan "Homebrew updates..."
 	brew-upgrades
-  echo "Homebrew updates done!"
+	echo "Homebrew updates done!"
 
 	echo-in-light-cyan "JDK updates..."
 	sdk selfupdate
