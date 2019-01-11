@@ -20,6 +20,7 @@ brew "dep"
 brew "diff-so-fancy"
 brew "emacs"
 brew "exa"
+brew "fd"
 brew "fswatch"
 brew "gist"
 brew "git", args: ['without-completions']
