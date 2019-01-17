@@ -6,7 +6,8 @@ echo-in-blue() { echo-in "\033[0;34m" $1}
 
 brew-upgrades() {
   echo-in-blue "Upgrading brew"
-  HOMEBREW_INSTALL_CLEANUP=true brew update
+  brew update
+  brew upgrade
 
   echo-in-blue "Upgrading mas"
   mas upgrade
