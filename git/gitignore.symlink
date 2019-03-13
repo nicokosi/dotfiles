@@ -7,3 +7,7 @@
 ###################
 .profiler/
 
+# Eclipse
+.classpath
+.project
+.settings
