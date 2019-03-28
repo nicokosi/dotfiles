@@ -27,6 +27,7 @@ brew "git", args: ['without-completions']
 brew "git-extras"
 brew "go"
 brew "gradle"
+brew "grip"
 brew "groovy"
 brew "haskell-stack"
 brew "htop"
