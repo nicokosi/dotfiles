@@ -21,3 +21,5 @@ export PS1="%~ • "
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 antigen-apply
+
+source $HOME/.antigen/bundles/rupa/z/z.sh
