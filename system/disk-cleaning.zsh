@@ -11,21 +11,26 @@ disk-cleanup() {
 
   echo "Maven cleanup (remove files from local repo)..."
   echo "  in local repo..."
-  rm -r /home/nkosinski/.m2/repository/com/vidal/**/*installer
-  rm -r /home/nkosinski/.m2/repository/com/vidal/merlin/vxp-indexer
-  rm -r /home/nkosinski/.m2/repository/com/vidal/merlin/native
-  rm -r /home/nkosinski/.m2/repository/com/vidal/merlin/data
+  rm -r $HOME/.m2/repository/com/vidal/**/*installer
+  rm -r $HOME/.m2/repository/com/vidal/merlin/vxp-indexer
+  rm -r $HOME/nkosinski/.m2/repository/com/vidal/merlin/native
+  rm -r $HOME/nkosinski/.m2/repository/com/vidal/merlin/data
   echo "  clean all Vidal Maven projects..."
-  for pom in ~/work/*/pom.xml; mvn clean -f $pom
+  for pom in ~/work/*/pom.xml;
+  	mvn clean --file $pom --quiet
+  	mvn dependency:purge-local-repository --define snapshotsOnly --quiet
   echo "✅"
 
   echo "Misc file cleanup..."
-  rm -r /home/nkosinski/work/api-installer/bin
-  rm -r /home/nkosinski/work/perceval-installer/bin
-  rm -r /home/nkosinski/work/perceval-installer/work
+  rm -r $HOME/work/api-installer/bin
+  rm -r $HOME/work/perceval-installer/bin
+  rm -r $HOME/work/perceval-installer/work
 
   echo "Spark cleanup..."
-  rm -r /opt/spark-2.1.1-bin-hadoop2.3/work/*
+  rm --recursive --force /opt/spark-2.*-bin-hadoop*/work/**
+
+  echo "SDKMAN! cleanup..."
+  sdk flush archives && sdk flush temp && sdk flush broadcast
 
   echo "Space after cleanup:"
   df -h | grep "/dev/sd"
