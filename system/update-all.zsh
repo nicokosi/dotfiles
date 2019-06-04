@@ -11,16 +11,16 @@ update-all() {
 	antigen update
 	echo "Antigen updated!"
 
-	echo-in-light-cyan "Homebrew updates..."
+	echo-in-light-cyan "Update Homebrew (applications)..."
 	brew-upgrades
-	echo "Homebrew updates done!"
+	echo "Homebrew updated!"
 
-	echo-in-light-cyan "JDK updates..."
+	echo-in-light-cyan "Update Java env..."
 	sdk selfupdate
 	sdk update java
-	echo "JDK updates done!"
+	echo "Java env updated!"
 
-	echo-in-light-cyan "Rustup updates..."
+	echo-in-light-cyan "Update Rust env..."
 	rustup update
-	echo "Rustup updates done!"
+	echo "Rust env updated!"
 }
