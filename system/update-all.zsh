@@ -5,6 +5,12 @@ echo-in() { #args= color, text
 echo-in-light-cyan() { echo-in "\033[0;96m" $1}
 
 update-all() {
+
+	echo-in-light-cyan "Update Antigen (shell plugins)..."
+	antigen selfupdate
+	antigen update
+	echo "Antigen updated!"
+
 	echo-in-light-cyan "Homebrew updates..."
 	brew-upgrades
 	echo "Homebrew updates done!"
