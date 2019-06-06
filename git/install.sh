@@ -18,3 +18,6 @@ apt install tig
 
 # Install 'hub' command-line for github
 go get github.com/github/hub
+
+# Command line tool for using emojis in commits
+npm i -g gitmoji-cli
