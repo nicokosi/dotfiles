@@ -7,6 +7,7 @@ apt install \
   httpie \
   install \
   p7zip-full \
+  recordmydesktop gtk-recordmydesktop \
   shellcheck \
   silversearcher-ag \
   sublime-text \
