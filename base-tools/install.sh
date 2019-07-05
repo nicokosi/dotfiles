@@ -14,6 +14,7 @@ apt install \
   terminator \
   trash-cli \
   tree \
+  valgrind \
   xmind \
   xmlstarlet \
   zip \
