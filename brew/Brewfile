@@ -61,6 +61,7 @@ brew "tldr"
 brew "travis"
 brew "tree"
 brew "typesafe-activator"
+brew "valgrind", args: ['HEAD']
 brew "watch"
 brew "wget"
 brew "youtube-dl"
