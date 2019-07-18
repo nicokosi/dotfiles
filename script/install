@@ -6,5 +6,8 @@ set -e
 
 cd "$(dirname $0)"/..
 
+# Retrieve antigen as a git submodule
+git submodule init
+
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
