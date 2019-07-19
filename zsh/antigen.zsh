@@ -1,9 +1,9 @@
 # Antigen
-source "$HOME/.dotfiles/antigen/antigen.zsh"
+source "$HOME/antigen.zsh"
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 # Plugins
-antigen-bundles <<EOBUNDLES
+antigen bundles <<EOBUNDLES
 git
 docker
 mvn
@@ -17,4 +17,4 @@ EOBUNDLES
 
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
-antigen-apply
+antigen apply
