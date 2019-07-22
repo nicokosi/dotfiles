@@ -1,2 +1,2 @@
 echo "💽 Disk usage:"
-df -h | grep /dev/sd
+df -h |grep /dev/nvme
