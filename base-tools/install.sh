@@ -3,7 +3,6 @@ apt install \
   diodon \
   ditaa \
   gist \
-  htop \
   httpie \
   install \
   p7zip-full \
