@@ -2,7 +2,7 @@
 rustup-init -y
 
 # Install 'rustfmt' Rust code formatter
-rustup component add rustfmt-preview
+rustup component add rustfmt
 
 # Install clippy, 'a bunch of lints to catch common mistakes and improve your Rust code'
 rustup update
