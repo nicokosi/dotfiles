@@ -15,7 +15,8 @@ alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gcb='git copy-branch-name'
-alias gb='git branch'
+alias gb='git branch --sort=committerdate'
+alias gbr='git branch --remote --sort=committerdate'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gap="git add --patch"
 
