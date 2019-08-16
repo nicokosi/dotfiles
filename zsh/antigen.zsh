@@ -6,7 +6,6 @@ antigen use oh-my-zsh
 
 # Plugins
 antigen-bundles <<EOBUNDLES
-arialdomartini/oh-my-git
 brew
 docker
 history
@@ -16,9 +15,7 @@ vagrant
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
-export PS1="%~ • "
-
-antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+antigen theme romkatv/powerlevel10k
 
 antigen-apply
 
