@@ -1,7 +1,6 @@
 # Antigen
 source "$HOME/.dotfiles/antigen/antigen.zsh"
 
-# Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
 # Plugins
@@ -15,8 +14,6 @@ rupa/z
 vagrant
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
-
-export PS1="%~ • "
 
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
