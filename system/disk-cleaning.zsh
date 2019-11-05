@@ -23,6 +23,15 @@ disk-cleanup() {
   done
   echo "Maven cleanup ✅\n"
 
+ for project in `ls`
+  do
+    if [[ -a $project/build.gradle.kts ]]
+    then
+      ./gradlew clean
+    fi
+  done
+  echo "Gradle cleanup ✅\n"
+
   echo "Misc file cleanup..."
   rm -r /Users/nicolas/work/vidal/api-installer/bin
   rm -r /Users/nicolas/work/vidal/perceval-installer/bin
