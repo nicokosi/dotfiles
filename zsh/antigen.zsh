@@ -13,6 +13,7 @@ vagrant
 rupa/z
 arialdomartini/oh-my-git
 zsh-users/zsh-syntax-highlighting
+gradle
 EOBUNDLES
 
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
