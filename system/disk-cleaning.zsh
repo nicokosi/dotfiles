@@ -32,6 +32,12 @@ disk-cleanup() {
   done
   echo "Gradle cleanup ✅\n"
 
+  rmtrash ~/.ivy2/cache/**
+  echo "Ivy cache cleanup ✅\n"
+
+  rmtrash ~/.m2/repository/**
+  echo "Maven repository cleanup ✅\n"
+
   echo "Misc file cleanup..."
   rm -r /Users/nicolas/work/vidal/api-installer/bin
   rm -r /Users/nicolas/work/vidal/perceval-installer/bin
