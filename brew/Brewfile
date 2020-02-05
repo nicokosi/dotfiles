@@ -26,6 +26,7 @@ brew "fswatch"
 brew "gist"
 brew "git", args: ['without-completions']
 brew "git-extras"
+brew "github/gh/gh"
 brew "go"
 brew "gradle"
 brew "grip"
