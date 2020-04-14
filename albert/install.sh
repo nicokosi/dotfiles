@@ -1,14 +1,19 @@
-sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_17.10/ /' > /etc/apt/sources.list.d/albert.list"
-
-wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_17.10/Release.key -O /tmp/albert-install/Release.key
-apt-key add - < /tmp/albert-install/Release.key
+curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 
 apt update
 apt install albert
 
 echo "Installing albert extensions..."
 extensions_dir="$HOME/.local/share/albert/org.albert.extension.externalextensions/extensions"
+python_dir="$HOME/.local/share/albert/org.albert.extension.python/modules"
+mkdir --parents $extensions_dir
+mkdir --parents python_dir
+
 git clone git@github.com:albertlauncher/external.git $entensions_dir
+git clone git@github.com:albertlauncher/python.git $python_dir
+git clone git@github.com:marek-mazur/albert-spell-extension.git $extensions_dir
+
+chmod +x "$python_dir/*.sh"
 
 # Add 'spell' extension (usage example: 'spell en great')
 echo "Installing 'spell' dependencies..."
@@ -18,13 +23,7 @@ mkdir -p ~/.local/share/albert/external/spell
 aspell -l en dump master | aspell -l en expand > ~/.local/share/albert/external/spell/en.dict
 aspell -l fr dump master | aspell -l fr expand > ~/.local/share/albert/external/spell/fr.dict
 echo "Installing 'spell' extension..."
-mkdir --parents $extensions_dir
-wget "https://raw.githubusercontent.com/albertlauncher/external/master/spell.py" --directory-prefix $extensions_dir
-chmod +x "$extensions_dir/spell.py"
-
-# Add 'copyq' extension
-wget "https://raw.githubusercontent.com/albertlauncher/external/master/copyq.sh" --directory-prefix $extensions_dir
-chmod +x "$extensions_dir/copyq.sh"
+chmod +x "$extensions_dir/Spell/__init__.py"
 
 # Launch Albert on startup
-cp /usr/share/applications/albert.desktop $HOME/.config/autostart/ && chmod +x $HOME/.config/autostart/albert.desktop
+cp --force /usr/share/applications/albert.desktop $HOME/.config/autostart/ && chmod +x $HOME/.config/autostart/albert.desktop
