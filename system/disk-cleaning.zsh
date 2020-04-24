@@ -13,8 +13,8 @@ disk-cleanup() {
   echo "  in local repo..."
   rm -r $HOME/.m2/repository/com/vidal/**/*installer
   rm -r $HOME/.m2/repository/com/vidal/merlin/vxp-indexer
-  rm -r $HOME/nkosinski/.m2/repository/com/vidal/merlin/native
-  rm -r $HOME/nkosinski/.m2/repository/com/vidal/merlin/data
+  rm -r $HOME/.m2/repository/com/vidal/merlin/native
+  rm -r $HOME/.m2/repository/com/vidal/merlin/data
   echo "  clean all Vidal Maven projects..."
   for pom in ~/work/*/pom.xml;
   	mvn clean --file $pom --quiet

@@ -12,5 +12,5 @@ BRANCH_TO_MERGE="$1"
 for rep in 'arthur' 'perceval' 'zapi-native' 'perceval-installer' 'cdrom-installer' 'zapi-sdk' 'api-installer' ;
 do
   echo "$rep: " ;
-  git --git-dir="/home/nkosinski/work/$rep/.git" branch --remote --contains $BRANCH_TO_MERGE
+  git --git-dir="$HOME/work/$rep/.git" branch --remote --contains $BRANCH_TO_MERGE
 done

@@ -1,3 +1,3 @@
 # added by travis gem
-[ -f /home/nkosinski/.travis/travis.sh ] && source /home/nkosinski/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 

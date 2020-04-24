@@ -1,2 +1,2 @@
-export GOPATH="/home/nkosinski/work/gocode"
+export GOPATH="$HOME/work/gocode"
 
