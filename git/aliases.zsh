@@ -20,6 +20,10 @@ alias gbr='git branch --remote --sort=committerdate'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gap="git add --patch"
 
+alias gst="git status"
+alias glo="git log"
+alias gr="git rebase"
+alias gcp="git cherry-pick"
 alias gpf='git push --force-with-lease'
 alias git-delete-merged-local-branches="git branch -d \$(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n')"
 alias git-audit-all-github-repos="audit"
