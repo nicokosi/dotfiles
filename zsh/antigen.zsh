@@ -4,7 +4,6 @@ source "$HOME/antigen.zsh"
 antigen use oh-my-zsh
 # Plugins
 antigen bundles <<EOBUNDLES
-git
 docker
 mvn
 gitignore
