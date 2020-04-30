@@ -31,3 +31,4 @@ alias git-protect-github-branches="protector"
 
 alias mg="parallel-git-repo"
 alias pgr=mg
+alias g="git"
