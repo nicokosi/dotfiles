@@ -18,17 +18,20 @@ alias gcb='git copy-branch-name'
 alias gb='git branch --sort=committerdate'
 alias gbr='git branch --remote --sort=committerdate'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+
+alias g="git"
+alias ga="git add"
 alias gap="git add --patch"
-
-alias gst="git status"
-alias glo="git log"
-alias gr="git rebase"
 alias gcp="git cherry-pick"
-alias gpf='git push --force-with-lease'
-alias git-delete-merged-local-branches="git branch -d \$(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n')"
+alias gf='git fetch --prune'
 alias git-audit-all-github-repos="audit"
+alias git-delete-merged-local-branches="git branch -d \$(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n')"
 alias git-protect-github-branches="protector"
-
+alias glo="git log"
+alias gpf='git push --force-with-lease'
+alias gr="git rebase"
+alias gra="git rebase --abort"
+alias grc="git rebase --continue"
+alias gst="git status"
 alias mg="parallel-git-repo"
 alias pgr=mg
-alias g="git"
