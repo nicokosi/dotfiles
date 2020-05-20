@@ -6,7 +6,7 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 arialdomartini/oh-my-git
 docker
-# git
+git
 gitignore
 gradle
 history
