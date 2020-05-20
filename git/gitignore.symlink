@@ -1,13 +1,13 @@
-
 ## jEnv configuration #
-#######################
 .java-version
 
 ## Maven Profiler #
-###################
 .profiler/
 
 # Eclipse
 .classpath
 .project
 .settings
+
+# Visual Studio Code
+.vscode/
