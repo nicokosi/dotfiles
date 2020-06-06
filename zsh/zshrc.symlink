@@ -35,3 +35,5 @@ do
 done
 
 unset config_files
+
+source /Users/nicolas/Library/Preferences/org.dystroy.broot/launcher/bash/br
