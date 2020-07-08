@@ -4,6 +4,10 @@
 
 set -e
 
+# Use Homebrew to install base applications
+cd brew
+brew bundle
+
 cd "$(dirname $0)"/..
 
 # Retrieve antigen as a git submodule
