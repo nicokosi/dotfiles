@@ -11,3 +11,6 @@
 
 # Visual Studio Code
 .vscode/
+
+# Jenv file
+.java-version
