@@ -13,7 +13,7 @@ brew-upgrades() {
   mas upgrade
 
   echo-in-blue "Upgrading brew cask"
-  for outdated in "${(@f)$(brew cask outdated --quiet)}"
+  for outdated in "${(@f)$(brew outdated --cask --quiet)}"
   do
     if [[ !  -z  $outdated  ]]
     then
