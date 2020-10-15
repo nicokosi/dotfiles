@@ -23,7 +23,7 @@
 [core]
         editor = vim
         autocrlf = input
-        excludesfile = $HOME/.gitignore
+        excludesFile = $HOME/.gitignore
         hooksPath = $HOME/work/software-git-hooks
         pager = "diff-so-fancy | less --tabs=4 -RFX"
 
