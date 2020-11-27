@@ -72,7 +72,6 @@ brew "youtube-dl"
 brew "zsh"
 
 cask "alfred"
-cask "atom"
 cask "caffeine"
 cask "calibre"
 cask "chromium"
