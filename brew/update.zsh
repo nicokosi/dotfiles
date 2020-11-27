@@ -7,7 +7,7 @@ echo-in-blue() { echo-in "\033[0;34m" $1}
 brew-upgrades() {
   echo-in-blue "Upgrading brew"
   brew update
-  brew upgrade
+  brew upgrade --greedy
 
   echo-in-blue "Upgrading mas"
   mas upgrade
