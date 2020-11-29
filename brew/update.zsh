@@ -17,7 +17,7 @@ brew-upgrades() {
   do
     if [[ !  -z  $outdated  ]]
     then
-      brew cask reinstall $outdated
+      brew reinstall --cask $outdated
     fi
   done
 
