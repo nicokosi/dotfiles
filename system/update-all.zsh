@@ -15,12 +15,13 @@ update-all() {
 	brew-upgrades
 	echo "Homebrew updated!"
 
-	echo-in-light-cyan "Update Java env..."
-	sdk selfupdate
-	sdk update java
-	echo "Java env updated!"
-
 	echo-in-light-cyan "Update Rust env..."
 	rustup update
 	echo "Rust env updated!"
+
+	echo-in-light-cyan "Update Java env... (may prompt for default version)"
+	sdk selfupdate
+	sdk update
+	sdk upgrade
+	echo "Java env updated!"
 }
