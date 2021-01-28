@@ -58,3 +58,6 @@
 
 [status]
         showUntrackedFiles = all
+
+[includeIf "gitdir:~/perso/"]
+	path = ~/.gitconfig-perso.inc
