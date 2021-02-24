@@ -1,3 +1,6 @@
+# Uncomment the following line to profile ZSH startup:
+#zmodload zsh/zprof
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
