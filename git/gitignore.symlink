@@ -17,3 +17,6 @@
 
 # SDKMAN!
 .sdkmanrc
+
+# IntelliJ IDEA
+.idea
