@@ -5,8 +5,7 @@
 set -e
 
 # Use Homebrew to install base applications
-cd brew
-brew bundle
+brew bundle --file ../brew/Brewfile
 
 cd "$(dirname $0)"/..
 
