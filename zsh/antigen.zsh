@@ -9,6 +9,7 @@ docker
 git
 gitignore
 gradle
+kubectl
 history
 mvn
 rupa/z
