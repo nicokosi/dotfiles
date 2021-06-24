@@ -26,6 +26,7 @@ brew "espanso"
 brew "exa"
 brew "fd"
 brew "fswatch"
+brew "fzf"
 brew "gist"
 brew "git", args: ['without-completions']
 brew "git-extras"
