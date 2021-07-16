@@ -52,13 +52,3 @@ brew "xmlstarlet"
 brew "yarn"
 brew "zip"
 brew "zsh"
-
-cask "atom"
-cask "copyq"
-cask "p4v"
-cask "sublime-text"
-cask "typora"
-cask "vagrant"
-cask "virtualbox"
-cask "xmind"
-
