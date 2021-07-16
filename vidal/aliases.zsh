@@ -10,6 +10,4 @@ alias check-merges=~/.dotfiles/vidal/check-merges.sh
 alias git-multi-fetch=~/.dotfiles/vidal/git-multi-fetch.sh
 alias git-multi-tag-list=~/.dotfiles/vidal/git-multi-tag-list.sh
 
-alias fortisslvpn="cd /opt/forticlientsslvpn && ./fortisslvpn.sh &> /dev/null &"
-alias vpn-vidal=fortisslvpn
-alias vpn=fortisslvpn
+alias vpn='cd /opt/fortisslvpn/forticlientsslvpn && ./fortisslvpn.sh &> /dev/null'
