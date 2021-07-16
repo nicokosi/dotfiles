@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "b0c5eda199b79c9ea5ce2706fc4fe3007e19eec9"
+        "revision": "7ec0ec6f4b7560f3ee448d5595160f54e4e0ca40"
       },
       "homebrew/core": {
-        "revision": "24ee965a2eaabd7e87e77d19c55712cdee8aad94"
+        "revision": "09bc458ee1de62ff7aa9e8ed31082c7b9e4ba9b4"
       }
     },
     "brew": {
@@ -1635,7 +1635,7 @@
       "Ubuntu 20.04.2 LTS (focal)": {
         "HOMEBREW_VERSION": "3.2.2",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "Homebrew/linuxbrew-core": "24ee965a2eaabd7e87e77d19c55712cdee8aad94",
+        "Homebrew/linuxbrew-core": "09bc458ee1de62ff7aa9e8ed31082c7b9e4ba9b4",
         "GCC": "9.3.0"
       }
     }
