@@ -30,6 +30,7 @@ brew "fzf"
 brew "gist"
 brew "git", args: ['without-completions']
 brew "git-extras"
+brew "git-gui"
 brew "github/gh/gh"
 brew "go"
 brew "gradle"
