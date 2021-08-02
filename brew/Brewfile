@@ -107,6 +107,7 @@ cask "vagrant"
 cask "visual-studio-code"
 cask "virtualbox"
 cask "vlc"
+cask "volta"
 cask "xmind"
 
 mas "iMovie", id: 408981434
