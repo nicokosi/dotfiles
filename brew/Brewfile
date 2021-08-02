@@ -1,5 +1,6 @@
 cask_args appdir: "/Applications"
 
+tap "cantino/mcfly"
 tap "federico-terzi/espanso"
 tap "homebrew/bundle"
 tap "homebrew/core"
@@ -47,6 +48,7 @@ brew "leiningen"
 brew "loc"
 brew "lynx"
 brew "m-cli"
+brew "mcfly"
 brew "macvim", args: ['override-system-vim']
 brew "mas"
 brew "maven-deluxe"
