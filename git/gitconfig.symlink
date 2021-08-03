@@ -75,7 +75,7 @@
 
 [user]
         name = Nicolas Kosinski
-        email = nicokosi@yahoo.com
+        email = nicokosi@users.noreply.github.com
 
 [merge]
 	tool = p4merge
