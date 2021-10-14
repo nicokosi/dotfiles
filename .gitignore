@@ -9,4 +9,6 @@ atom.symlink/themes
 
 cache
 
+docker/dockersw2/*.pem
+
 git/gitconfig.symlink
