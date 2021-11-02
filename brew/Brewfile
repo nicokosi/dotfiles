@@ -59,7 +59,6 @@ brew "netdata", restart_service: true
 brew "node"
 brew "nushell"
 brew "openssl"
-brew "podman"
 brew "python"
 brew "ripgrep"
 brew "rmtrash"
