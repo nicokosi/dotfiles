@@ -86,3 +86,5 @@
 
 [includeIf "gitdir:~/work/vidal/"]
 	path = ~/.gitconfig-vidal.inc
+[init]
+	defaultBranch = main
