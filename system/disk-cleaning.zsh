@@ -2,6 +2,10 @@ disk-cleanup() {
   echo "Space before cleanup:"
   df -h | grep "/dev/disk1"
 
+  echo "Brew cleanup..."
+  brew cleanup --prune=all
+  echo "Brew cleanup ✅\n"
+
   echo "Docker cleanup..."
   docker system prune --all --force
   docker rmi --force $(docker images --all --quiet)
