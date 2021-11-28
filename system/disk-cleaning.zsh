@@ -2,6 +2,10 @@ disk-cleanup() {
   echo "Space before cleanup:"
   df -h | grep "/dev/disk1"
 
+  echo "App cache cleanup..."
+  rm -rf ~/Library/Caches/*
+  echo "App cache cleanup ✅\n"
+
   echo "Brew cleanup..."
   brew cleanup --prune=all
   echo "Brew cleanup ✅\n"
