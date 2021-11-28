@@ -2,25 +2,18 @@ disk-cleanup() {
   echo "Space before cleanup:"
   df -h | grep "/dev/disk1"
 
-  echo "App cache cleanup..."
-  rm -rf ~/Library/Caches/*
-  echo "App cache cleanup ✅\n"
+  ls ~/Library/Caches | xargs rm -rf
+  echo "App cache cleanup 🖥\n"
 
-  echo "Brew cleanup..."
   brew cleanup --prune=all
-  echo "Brew cleanup ✅\n"
+  echo "Brew cleanup 🍻\n"
 
-  echo "Docker cleanup..."
   docker system prune --all --force
   docker rmi --force $(docker images --all --quiet)
   docker rm --force $(docker ps --all --quiet)
-  #rm -r /var/lib/docker/aufs/diff
-  echo "Docker cleanup ✅\n"
+  echo "Docker cleanup 🐳\n"
 
-  echo "Maven cleanup (remove files from local repo)..."
-  echo "  in local repo..."
-  rm -r /Users/nicolas/.m2/repository/com/vidal
-  echo "  clean Vidal projects..."
+  ls ~/.m2/repository | xargs rm -rf
   cd ~/work/vidal
   for project in `ls`
   do
@@ -29,7 +22,7 @@ disk-cleanup() {
       mvn-vidal -q -f $project/pom.xml clean
     fi
   done
-  echo "Maven cleanup ✅\n"
+  echo "Maven cleanup 🪶\n"
 
  for project in `ls`
   do
@@ -38,21 +31,18 @@ disk-cleanup() {
       ./gradlew clean
     fi
   done
-  echo "Gradle cleanup ✅\n"
+  echo "Gradle cleanup 🐘\n"
 
-  rmtrash ~/.ivy2/cache/**
-  echo "Ivy cache cleanup ✅\n"
+  ls ~/.ivy2/cache | xargs rm -rf
+  echo "Ivy cleanup 🐜\n"
 
-  rmtrash ~/.m2/repository/**
-  echo "Maven repository cleanup ✅\n"
+  sdk flush archives && sdk flush broadcast && sdk flush temp
+  echo "SDKMAN! cleanup 🦸\n"
 
-  echo "Misc file cleanup..."
+
   rm -r /Users/nicolas/work/vidal/api-installer/bin
   rm -r /Users/nicolas/work/vidal/perceval-installer/bin
-  echo "Misc file cleanup ✅\n"
-
-  echo "SDKMAN! cleanup..."
-  sdk flush archives && sdk flush broadcast && sdk flush temp
+  echo "Misc file cleanup 🧹\n"
 
   echo "Space after cleanup:"
   df -h | grep "/dev/disk1"
