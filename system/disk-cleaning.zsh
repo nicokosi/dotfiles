@@ -24,7 +24,8 @@ disk-cleanup() {
   done
   echo "Maven cleanup 🪶\n"
 
- for project in `ls`
+  ls ~/.gradle/caches | xargs rm -rf
+  for project in `ls`
   do
     if [[ -a $project/build.gradle.kts ]]
     then
