@@ -26,3 +26,5 @@ alias gpf='git push --force-with-lease'
 alias grh='git reset --hard @{u}'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gst='git status'
+alias gsw='git switch'
+
