@@ -11,5 +11,12 @@ fi
 
 alias open="xdg-open"
 
-alias apt-all-upgrades="sudo apt update && sudo apt upgrade && sudo apt-get autoremove"
-alias upgrade-everything="apt-all-upgrades && brew upgrade"
+alias apt-all-upgrades="sudo apt update && \
+  sudo apt upgrade && \
+  sudo apt-get autoremove"
+
+alias upgrade-everything="apt-all-upgrades && \
+  brew upgrade && \
+  sdk update && \
+  sdk upgrade && \
+  gh extension upgrade --all"
