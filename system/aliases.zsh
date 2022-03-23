@@ -20,3 +20,6 @@ alias upgrade-everything="apt-all-upgrades && \
   sdk update && \
   sdk upgrade && \
   gh extension upgrade --all"
+
+alias minimalShellPrompt="export PS1='$ ' && export RPROMPT=''"
+
