@@ -11,3 +11,5 @@ fi
 
 
 alias upgrade="echo '\033[0;34mUpgrade shell (oh my zsh) and apps (via brew)\033[0m' && antigen update && brew-upgrades"
+
+alias minimalShellPrompt="export PS1='$ ' && export RPROMPT=''"
