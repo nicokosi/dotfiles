@@ -13,3 +13,9 @@
 
 # SDKMAN!
 .sdkmanrc
+
+# Visual Studio Code
+.vscode
+.bloop
+.metals
+.vscode
