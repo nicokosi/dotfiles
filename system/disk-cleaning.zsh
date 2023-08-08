@@ -16,15 +16,6 @@ disk-cleanup() {
   print "Docker cleanup 🐳\n"
 
   ls ~/.m2/repository | xargs rm -rf
-  cd ~/work/vidal || exit
-  for project in $(ls)
-  do
-    if [[ -a $project/pom.xml ]]
-    then
-      mvn-vidal -q -f "$project/pom.xml" clean
-    fi
-  done
-  print "Maven cleanup 🪶\n"
 
   ls ~/.gradle/caches | xargs rm -rf
   for project in $(ls)
@@ -41,11 +32,6 @@ disk-cleanup() {
 
   sdk flush archives && sdk flush broadcast && sdk flush temp
   print "SDKMAN! cleanup 🦸\n"
-
-
-  rm -r /Users/nicolas/work/vidal/api-installer/bin
-  rm -r /Users/nicolas/work/vidal/perceval-installer/bin
-  print "Misc file cleanup 🧹\n"
 
   print "Space after cleanup:"
   df -h | grep "/dev/disk1"
