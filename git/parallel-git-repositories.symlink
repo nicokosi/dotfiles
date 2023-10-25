@@ -1,0 +1,37 @@
+[repositories]
+	default = [
+		"/home/nkosinski@france.groupe.intra/work/cdrom-installer",
+		"/home/nkosinski@france.groupe.intra/work/perceval",
+		"/home/nkosinski@france.groupe.intra/work/perceval-installer",
+		"/home/nkosinski@france.groupe.intra/work/zapi-native",
+		"/home/nkosinski@france.groupe.intra/work/zapi-sdk",
+		"/home/nkosinski@france.groupe.intra/work/api-installer",
+		"/home/nkosinski@france.groupe.intra/work/arthur"
+	]
+	vm = [
+		"/home/nkosinski@france.groupe.intra/work/vidal-menu",
+		"/home/nkosinski@france.groupe.intra/work/vidal-menu-installer",
+		"/home/nkosinski@france.groupe.intra/work/vidal-menu-client"
+	]
+	sous = [
+		"/home/nkosinski@france.groupe.intra/work/vulcain",
+		"/home/nkosinski@france.groupe.intra/work/drf-publisher"
+	]
+	vira = [
+		"/home/nkosinski@france.groupe.intra/work/vira",
+		"/home/nkosinski@france.groupe.intra/work/vidal-fhir-store"
+	]
+
+[commands]
+  fetch = "git fetch origin -p"
+  pull = "git pull"
+  push = "git push $@"
+  checkout = "git checkout $@"
+  ulg = "git ulg"
+  llg = "git llg"
+  current-branch = "git rev-parse --abbrev-ref HEAD"
+  merge = "git merge --log --no-ff --no-commit $@"
+  set-version = "mvn org.codehaus.mojo:versions-maven-plugin:set -DnewVersion=$1"
+  status = "git status"
+  ismerged = "git branch --list $1 -r --merged"
+  contains = "git branch -r --contains $1"
