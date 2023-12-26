@@ -15,6 +15,10 @@ update-all() {
 	brew-upgrades
 	echo "Homebrew updated!"
 
+	echo-in-light-cyan "Update MacPorts (applications)..."
+	macports-upgrades
+	echo "MacPorts updated!"
+
 	echo-in-light-cyan "Update Rust env..."
 	rustup update
 	echo "Rust env updated!"
