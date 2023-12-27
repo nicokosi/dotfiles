@@ -6,8 +6,8 @@ echo-in-blue() { echo-in "\033[0;34m" $1}
 
 macports-upgrades() {
   echo-in-blue "Upgrading MacPorts"
-  sudo port selfupdate
-  sudo port upgrade outdated
+  port selfupdate
+  port upgrade outdated
 
   echo "Cleanup"
   brew cleanup -s
