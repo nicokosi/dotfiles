@@ -31,6 +31,28 @@ make && make install
 
 echo-in-blue "MacPorts has been installed to run with no root privileges! ☑️"
 
+echo-in-blue "Installing ports... ⤵️"
+port \
+  -N `#Non-interactive mode` \
+  install \
+    bat \
+    diff-so-fancy \
+    gh \
+    git \
+    go \
+    jenv \
+    macos-trash \
+    maven3 \
+    mcfly \
+    npm10 \
+    tealdeer \
+    the_silver_searcher \
+    tig \
+    youtube-dl \
+    yt-dlp \
+    zsh
+echo-in-blue "Ports have been installed! ☑️"
+
 TRAPEXIT() {
 	echo-in-blue "File cleanup. 🗑"
     rm -f ~/macports/MacPorts-2.8.1.tar.bz2
