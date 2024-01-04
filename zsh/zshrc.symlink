@@ -39,9 +39,9 @@ done
 
 unset config_files
 
-source /Users/nicolas/Library/Preferences/org.dystroy.broot/launcher/bash/br
-
 eval "$(mcfly init zsh)"
+
+$(jenv init -)
 
 # Uncomment the following line to profile ZSH startup:
 #zprof
