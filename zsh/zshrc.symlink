@@ -39,5 +39,9 @@ done
 
 unset config_files
 
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export JAVA_HOME=$( jenv javahome )
+
 # Uncomment the following line to profile ZSH startup:
 #zprof
