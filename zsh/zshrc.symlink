@@ -39,9 +39,5 @@ done
 
 unset config_files
 
-eval "$(mcfly init zsh)"
-
-$(jenv init -)
-
 # Uncomment the following line to profile ZSH startup:
 #zprof
