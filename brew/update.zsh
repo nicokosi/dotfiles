@@ -1,27 +1,24 @@
-echo-in() { #args= color, text
-  local NO_COLOR="\033[0m"
-  echo "${1}${2}${NO_COLOR}"
-}
-echo-in-blue() { echo-in "\033[0;34m" $1}
+#!/bin/zsh
+
+~/.dotfiles/system/echos.zsh
 
 brew-upgrades() {
   echo-in-blue "Upgrading brew"
-  brew update
-  brew upgrade
+  echo_and_run brew update && brew upgrade
 
   echo-in-blue "Upgrading mas"
-  mas upgrade
+  echo_and_run mas upgrade
 
   echo-in-blue "Upgrading brew cask"
   for outdated in "${(@f)$(brew outdated --cask --quiet)}"
   do
     if [[ !  -z  $outdated  ]]
     then
-      brew reinstall --cask $outdated
+      echo_and_run brew reinstall --cask $outdated
     fi
   done
 
-  echo "Cleanup"
-  brew cleanup -s
-  echo "Done!"
+  echo-in-blue "Cleanup"
+  echo_and_run brew cleanup -s
+  echo-in-green "Done!"
 }
