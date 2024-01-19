@@ -1,11 +1,6 @@
 #!/bin/zsh
 
-echo-in() { #args= color, text
-  local NO_COLOR="\033[0m"
-  echo "${1}${2}${NO_COLOR}"
-}
-echo-in-blue() { echo-in "\033[0;34m" $1}
-
+~/.dotfiles/system/echos.zsh
 
 echo-in-blue "Downloading MacPorts source code... ⬇️"
 mkdir -p ~/macports
@@ -14,9 +9,9 @@ wget https://github.com/macports/macports-base/releases/download/v2.8.1/MacPorts
 tar xf MacPorts-2.8.1.tar.bz2
 
 echo-in-blue "Installing MacPorts from code... 🛠"
-cd MacPorts-2.8.1
-./configure --enable-readline --prefix=$HOME/macports --with-no-root-privileges
-make && make install
+echo_and_run cd MacPorts-2.8.1
+echo_and_run ./configure --enable-readline --prefix=$HOME/macports --with-no-root-privileges
+echo_and_run make && make install
 
 #echo-in-blue "Configuring the shell for MacPorts... ⚙️"
 # bash
