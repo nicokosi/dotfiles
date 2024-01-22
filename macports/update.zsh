@@ -4,10 +4,6 @@
 
 macports-upgrades() {
   echo-in-blue "Upgrading MacPorts"
-  port selfupdate
-  port upgrade outdated
-
-  echo "Cleanup"
-  brew cleanup -s
-  echo "Done!"
+  echo_and_run port selfupdate && port upgrade outdated
+  echo-in-green "Done!"
 }
