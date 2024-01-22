@@ -33,6 +33,7 @@ echo_and_run port \
     bat \
     clojure \
     diff-so-fancy \
+    diskonaut \
     gh \
     git \
     go \
