@@ -47,6 +47,7 @@ echo_and_run port \
     tealdeer \
     the_silver_searcher \
     tig \
+    tree \
     youtube-dl \
     yt-dlp \
     zig \
