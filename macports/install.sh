@@ -44,6 +44,7 @@ echo_and_run port \
     maven3 \
     mcfly \
     npm10 \
+    shellcheck \
     tealdeer \
     the_silver_searcher \
     tig \
