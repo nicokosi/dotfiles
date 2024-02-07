@@ -43,6 +43,7 @@ echo_and_run port \
     macos-trash \
     maven3 \
     mcfly \
+    ncdu \
     npm10 \
     shellcheck \
     tealdeer \
