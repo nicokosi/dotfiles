@@ -39,6 +39,7 @@ echo_and_run port \
     go \
     httpie \
     jenv \
+    jq \
     leiningen \
     macos-trash \
     maven3 \
