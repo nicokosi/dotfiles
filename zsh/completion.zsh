@@ -3,3 +3,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
+
+source /Users/nicolas/macports/share/fzf/shell/completion.zsh
