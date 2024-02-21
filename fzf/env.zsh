@@ -1,3 +1,2 @@
-source /Users/nicolas/macports/share/fzf/shell/completion.zsh
-source /Users/nicolas/macports/share/fzf/shell/key-bindings.zsh
-
+source /opt/local/share/fzf/shell/completion.zsh
+source /opt/local/share/fzf/shell/key-bindings.zsh
