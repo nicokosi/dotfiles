@@ -11,7 +11,9 @@ echo_and_run sudo port \
     fzf \
     gh \
     git \
+    glab \
     go \
+    htop \
     httpie \
     jenv \
     jq \
