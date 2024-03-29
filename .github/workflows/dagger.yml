@@ -1,0 +1,19 @@
+name: dagger
+on:
+  push:
+    branches: [shellcheck-via-dagger]
+
+jobs:
+  build:
+    name: shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      -
+        name: lint
+        uses: dagger/dagger-for-github@v5
+        with:
+          version: "0.10.2"
+          verb: call
+          module: github.com/tsirysndr/daggerverse/shellcheck@e8bed26dfefaaf4ef3d00958965575131f34c69c
+          args: lint --src .
