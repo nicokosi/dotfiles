@@ -52,4 +52,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-unalias mvnd
+#unalias mvnd
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
