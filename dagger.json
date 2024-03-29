@@ -1,4 +1,10 @@
 {
   "name": ".dotfiles",
+  "dependencies": [
+    {
+      "name": "shellcheck",
+      "source": "github.com/tsirysndr/daggerverse/shellcheck@e8bed26dfefaaf4ef3d00958965575131f34c69c"
+    }
+  ],
   "engineVersion": "v0.10.3"
 }
