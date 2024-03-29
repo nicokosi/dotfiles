@@ -31,13 +31,14 @@
         helper = cache
 
 [merge]
-        conflictStyle = diff3
+	conflictstyle = diff3
         tool = p4merge
 
 [mergetool]
         keepBackup = false
         keepTemporaries = false
         prompt = false
+        path = /opt/local/p4merge/bin
 
 [pull]
         rebase = merges
@@ -63,3 +64,5 @@
 
 [includeIf "gitdir:~/perso/"]
 	path = ~/.gitconfig-perso.inc
+[diff]
+        tool = p4merge
