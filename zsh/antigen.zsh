@@ -9,11 +9,12 @@ gradle
 kubectl
 history
 mvn
-rupa/z
+#rupa/z
+agkozak/zsh-z
 vagrant
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 antigen apply
 
-source $HOME/.antigen/bundles/rupa/z/z.sh
+#source $HOME/.antigen/bundles/rupa/z/z.sh
