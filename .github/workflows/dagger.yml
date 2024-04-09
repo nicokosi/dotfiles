@@ -16,4 +16,4 @@ jobs:
           version: "0.10.2"
           verb: call
           module: github.com/tsirysndr/daggerverse/shellcheck@e8bed26dfefaaf4ef3d00958965575131f34c69c
-          args: lint --src .
+          args: lint --src . --files "**/*.*sh"
