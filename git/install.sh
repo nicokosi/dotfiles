@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Command line tool that audits all GitHub repositories:
 go install 'github.com/jessfraz/audit@latest'
 

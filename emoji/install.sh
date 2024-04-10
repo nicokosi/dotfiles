@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Do not install from package manager since version is too old
 # and does not contain this feature:
 # "Global hotkey support via socket:"
@@ -6,7 +8,7 @@
 #apt-get update
 #sudo apt-get install emojione-picker
 
-cd
+cd || exit
 git clone https://github.com/gentakojima/emojione-picker-ubuntu
-cd emojione-picker-ubuntu
+cd emojione-picker-ubuntu || exit
 ./install.sh

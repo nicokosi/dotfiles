@@ -1,3 +1,5 @@
+#!/bin/sh
+
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 
 apt update
@@ -6,12 +8,12 @@ apt install albert
 echo "Installing albert extensions..."
 extensions_dir="$HOME/.local/share/albert/org.albert.extension.externalextensions/extensions"
 python_dir="$HOME/.local/share/albert/org.albert.extension.python/modules"
-mkdir --parents $extensions_dir
+mkdir --parents "$extensions_dir"
 mkdir --parents python_dir
 
-git clone git@github.com:albertlauncher/external.git $entensions_dir
-git clone git@github.com:albertlauncher/python.git $python_dir
-git clone git@github.com:marek-mazur/albert-spell-extension.git $extensions_dir
+git clone git@github.com:albertlauncher/external.git "$extensions_dir"
+git clone git@github.com:albertlauncher/python.git "$python_dir"
+git clone git@github.com:marek-mazur/albert-spell-extension.git "$extensions_dir"
 
 chmod +x "$python_dir/*.sh"
 
@@ -26,4 +28,4 @@ echo "Installing 'spell' extension..."
 chmod +x "$extensions_dir/Spell/__init__.py"
 
 # Launch Albert on startup
-cp --force /usr/share/applications/albert.desktop $HOME/.config/autostart/ && chmod +x $HOME/.config/autostart/albert.desktop
+cp --force /usr/share/applications/albert.desktop "$HOME/.config/autostart/" && chmod +x "$HOME/.config/autostart/albert.desktop"

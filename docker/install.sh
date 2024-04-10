@@ -1,6 +1,8 @@
+#!/bin/sh
+
 # Fix "must run as sudo" issue:
 groupadd docker
-gpasswd -a ${USER} docker
+gpasswd -a "${USER}" docker
 
 # Configure 'bridge' network IP and DNS for Vidal
 echo "{
