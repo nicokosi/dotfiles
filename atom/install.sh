@@ -1,3 +1,5 @@
+#!/bin/sh
+
 apm install \
   language-scala \
   language-docker \
