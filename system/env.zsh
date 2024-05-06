@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # Disable the sound effects on boot
 #sudo nvram SystemAudioVolume=" "

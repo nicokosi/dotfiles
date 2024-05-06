@@ -1,8 +1,25 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Uncomment the following line to profile ZSH startup:
 #zmodload zsh/zprof
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
+
+plugins=(
+  brew
+  docker
+  history
+  mvn
+  rupa/z
+  vagrant
+  zsh-users/zsh-syntax-highlighting
+)
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -42,6 +59,9 @@ unset config_files
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export JAVA_HOME=$( jenv javahome )
+
+# To customize powerlevel10k prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Uncomment the following line to profile ZSH startup:
 #zprof

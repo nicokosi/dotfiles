@@ -30,5 +30,6 @@ echo_and_run sudo port \
     tree \
     youtube-dl \
     yt-dlp \
+    z \
     zsh
 echo-in-green "Ports have been installed! ☑️"
