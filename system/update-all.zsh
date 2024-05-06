@@ -3,10 +3,6 @@
 ~/.dotfiles/system/echos.zsh
 
 update-all() {
-	echo-in-blue "Update Antigen (shell plugins)..."
-	echo_and_run antigen selfupdate && antigen update
-	echo-in-green "Antigen updated!"
-
 	echo-in-blue "Update Homebrew (applications)..."
 	echo_and_run brew-upgrades
 	echo-in-green "Homebrew updated!"
