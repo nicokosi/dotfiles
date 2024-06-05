@@ -11,16 +11,6 @@ fi
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
-plugins=(
-  brew
-  docker
-  history
-  mvn
-  rupa/z
-  vagrant
-  zsh-users/zsh-syntax-highlighting
-  zsh-history-substring-search
-)
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
