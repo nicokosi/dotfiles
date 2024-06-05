@@ -31,5 +31,6 @@ echo_and_run sudo port \
     youtube-dl \
     yt-dlp \
     z \
-    zsh
+    zsh \
+    zsh-history-substring-search
 echo-in-green "Ports have been installed! ☑️"

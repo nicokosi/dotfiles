@@ -43,3 +43,5 @@ bindkey '^?' backward-delete-char
 
 export EDITOR=/usr/local/bin/subl
 export VISUAL=/usr/local/bin/subl
+
+source '/opt/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh'
