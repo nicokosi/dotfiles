@@ -41,7 +41,9 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
+source /opt/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 export EDITOR=/usr/local/bin/subl
 export VISUAL=/usr/local/bin/subl
-
-source '/opt/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh'
