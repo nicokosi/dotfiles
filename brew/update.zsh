@@ -6,9 +6,6 @@ brew-upgrades() {
   echo-in-blue "Upgrading brew"
   echo_and_run brew update && brew upgrade
 
-  echo-in-blue "Upgrading mas"
-  echo_and_run mas upgrade
-
   echo-in-blue "Upgrading brew cask"
   for outdated in "${(@f)$(brew outdated --cask --quiet)}"
   do
