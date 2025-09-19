@@ -27,7 +27,7 @@
         ui = true
 
 [core]
-        editor = vim
+        editor = zed --wait
         autocrlf = input
         excludesFile = ~/.gitignore
         hooksPath = $HOME/work/software-git-hooks
