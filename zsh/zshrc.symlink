@@ -51,3 +51,7 @@ unset config_files
 
 # Uncomment the following line to profile ZSH startup:
 #zprof
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
