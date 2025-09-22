@@ -1,50 +1,54 @@
-The following ports are currently installed:
-  bat @0.25.0_0 (active)
-  bat-extras @2024.08.24_0 (active)
-  boost181 @1.81.0_12+no_single+no_static+python312 (active)
-  clojure @1.12.0.1495_0 (active)
-  coreutils @9.5_0 (active)
-  curl @8.11.1_0+brotli+http2+idn+psl+ssl+zstd (active)
-  dagger @0.15.1_0 (active)
-  diff-so-fancy @1.4.4_0 (active)
-  diskonaut @0.11.0_0 (active)
-  docker @27.4.1_0 (active)
-  eza @0.20.16_0+doc+git (active)
-  ffmpeg @4.4.5_3+gpl2 (active)
-  fzf @0.57.0_0 (active)
-  gh @2.65.0_0 (active)
-  git @2.48.0_0+credential_osxkeychain+diff_highlight+doc+pcre+perl5_34 (active)
-  glab @1.40.0_0 (active)
-  go @1.23.4_0 (active)
-  htop @3.3.0_2 (active)
-  httpie @3.2.4_0+python312 (active)
-  hugo @0.140.0_0 (active)
-  joshuto @0.9.8_0 (active)
-  jq @1.7.1_1 (active)
-  lazygit @0.44.1_0 (active)
-  leiningen @2.11.2_0 (active)
-  libiconv @1.17_0 (active)
-  lychee @0.16.1_0 (active)
-  macos-trash @1.2.0_0 (active)
-  maven3 @3.9.9_0 (active)
-  mcfly @0.9.2_0 (active)
-  ncdu @2.5_0 (active)
-  npm10 @10.9.0_0 (active)
-  pipx @1.7.1_1+python313 (active)
-  python311 @3.11.11_0+lto+optimizations (active)
-  python312 @3.12.8_0+lto+optimizations (active)
-  rio @0.2.2_0 (active)
-  rlwrap @0.46.1_0 (active)
-  shellcheck @0.10.0_6 (active)
-  slides @0.9.0_0 (active)
-  tealdeer @1.7.1_0 (active)
-  the_silver_searcher @2.2.0_0 (active)
-  tig @2.5.10_0+doc (active)
-  tree @2.2.1_0 (active)
-  z @1.12_0 (active)
-  zed @1.18.0_0 (active)
-  zellij @0.41.2_0 (active)
-  zenith @0.14.1_0 (active)
-  zola @0.19.2_0 (active)
-  zsh @5.9_3 (active)
-  zsh-history-substring-search @1.1.0_0 (active)
+bat                            @0.25.0_1 
+bat-extras                     @2024.08.24_0 
+boost181                       @1.81.0_13+no_single+no_static+python312 
+clojure                        @1.12.2.1565_0 
+colima                         @0.8.4_0 
+coreutils                      @9.5_1 
+curl                           @8.13.0_0+brotli+http2+idn+psl+ssl+zstd 
+diff-so-fancy                  @1.4.4_0 
+diskonaut                      @0.11.0_0 
+docker                         @28.3.3_0 
+ffmpeg                         @4.4.6_2+gpl2 
+freeze                         @0.2.2_0 
+fzf                            @0.65.2_0 
+gh                             @2.78.0_0 
+git                            @2.51.0_0+credential_osxkeychain+diff_highlight+doc+pcre+perl5_34 
+glab                           @1.40.0_0 
+glow                           @2.1.1_0 
+go                             @1.25.1_0 
+hackernews-tui                 @0.13.5_0 
+htop                           @3.4.1_0 
+httpie                         @3.2.4_0+python312 
+hugo                           @0.148.1_0 
+hugo                           @0.150.0_0 
+joshuto                        @0.9.8_0 
+jq                             @1.8.1_0 
+lazygit                        @0.55.0_0 
+leiningen                      @2.11.2_0 
+libiconv                       @1.17_0 
+lychee                         @0.20.0_0 
+lynx                           @2.9.2_0+ssl 
+macos-trash                    @1.2.0_0 
+maven3                         @3.9.11_0 
+mcfly                          @0.9.3_0 
+ncdu                           @2.9.1_0 
+npm10                          @10.9.0_0 
+pipx                           @1.7.1_1+python313 
+podman                         @5.5.2_0 
+python311                      @3.11.13_0+lto+optimizations 
+python312                      @3.12.11_0+lto+optimizations 
+rlwrap                         @0.46.1_0 
+shellcheck                     @0.11.0_0 
+slides                         @0.9.0_0 
+tealdeer                       @1.7.1_0 
+the_silver_searcher            @2.2.0_0 
+tig                            @2.5.12_0+doc 
+tree                           @2.2.1_0 
+wget                           @1.25.0_1+gnutls 
+yt-dlp                         @2025.08.27_0+ffmpeg+python313 
+z                              @1.12_0 
+zed                            @1.18.0_0 
+zenith                         @0.14.1_0 
+zola                           @0.20.0_0 
+zsh                            @5.9_3 
+zsh-history-substring-search   @1.1.0_0 
