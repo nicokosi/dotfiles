@@ -61,7 +61,7 @@ When contributing to or using this repository:
 
 This repository should be regularly scanned using tools like:
 - GitHub's built-in secret scanning (if enabled)
-- [gitleaks](https://github.com/zricethezav/gitleaks)
+- [gitleaks](https://github.com/gitleaks/gitleaks)
 - [truffleHog](https://github.com/trufflesecurity/trufflehog)
 - [git-secrets](https://github.com/awslabs/git-secrets)
 

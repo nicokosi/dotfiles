@@ -32,8 +32,7 @@ declare -a patterns=(
     'xox[baprs]-[0-9]{10,12}-[0-9]{10,12}-[a-zA-Z0-9]{24,32}'  # Slack tokens
     'AIza[0-9A-Za-z\\-_]{35}'                          # Google API Key
     '-----BEGIN (RSA |DSA |EC |OPENSSH )?PRIVATE KEY-----'  # Private keys
-    '["\047]password["\047]\s*:\s*["\047][^"\047]{8,}'  # Password in JSON/YAML
-    '["\047]api[_-]?key["\047]\s*:\s*["\047][^"\047]{16,}'  # API key in JSON/YAML
+    '(password|api[_-]?key|secret[_-]?key)\s*[=:]\s*["\x27][^"\x27]{8,}'  # Password/API key assignment
 )
 
 found_issues=0
@@ -57,7 +56,6 @@ declare -a forbidden_files=(
     'id_rsa'
     'id_dsa'
     'id_ed25519'
-    '.aws/credentials'
     'credentials'
     'secrets.yml'
     'secrets.yaml'
