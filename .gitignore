@@ -39,7 +39,9 @@ secret.yaml
 .pypirc
 .gem/credentials
 .netrc
-*.env-vars
+# Note: .env-vars is for the local ~/.env-vars file
+# The file private/env-vars.zsh is intentionally tracked (it only sources ~/.env-vars)
+.env-vars
 
 # SSH configuration (may contain sensitive host info)
 .ssh/config
