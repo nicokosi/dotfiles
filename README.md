@@ -67,6 +67,16 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
 
+## security
+
+This repository is designed to keep your credentials safe. See [SECURITY.md](SECURITY.md) for details on:
+
+- How to securely store environment variables and API keys
+- Pre-commit hooks to prevent accidental credential leaks
+- Security scan results and best practices
+
+**Important**: Never commit credentials directly. Use the `~/.env-vars` pattern described in the security documentation.
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should

@@ -1,0 +1,90 @@
+#!/bin/bash
+#
+# Pre-commit hook to detect potential secrets in commits
+# 
+# To install this hook, copy it to .git/hooks/pre-commit and make it executable:
+#   cp git/hooks/pre-commit.sample .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+#
+
+# Colors for output
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo "🔍 Scanning for potential secrets..."
+
+# Get list of files to be committed
+files=$(git diff --cached --name-only --diff-filter=ACM)
+
+# Common secret patterns to check
+declare -a patterns=(
+    'ghp_[a-zA-Z0-9]{36}'                              # GitHub Personal Access Token
+    'github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59}'       # GitHub fine-grained PAT
+    'gho_[a-zA-Z0-9]{36}'                              # GitHub OAuth Access Token
+    'ghu_[a-zA-Z0-9]{36}'                              # GitHub User-to-Server Token
+    'ghs_[a-zA-Z0-9]{36}'                              # GitHub Server-to-Server Token
+    'ghr_[a-zA-Z0-9]{36}'                              # GitHub Refresh Token
+    'AKIA[0-9A-Z]{16}'                                 # AWS Access Key ID
+    'sk_live_[a-zA-Z0-9]{24,}'                         # Stripe Live Secret Key
+    'sk_test_[a-zA-Z0-9]{24,}'                         # Stripe Test Secret Key
+    'xox[baprs]-[0-9]{10,12}-[0-9]{10,12}-[a-zA-Z0-9]{24,32}'  # Slack tokens
+    'AIza[0-9A-Za-z\\-_]{35}'                          # Google API Key
+    '-----BEGIN (RSA |DSA |EC |OPENSSH )?PRIVATE KEY-----'  # Private keys
+    '["\047]password["\047]\s*:\s*["\047][^"\047]{8,}'  # Password in JSON/YAML
+    '["\047]api[_-]?key["\047]\s*:\s*["\047][^"\047]{16,}'  # API key in JSON/YAML
+)
+
+found_issues=0
+
+# Check each file
+for file in $files; do
+    if [ -f "$file" ]; then
+        for pattern in "${patterns[@]}"; do
+            if grep -qiE "$pattern" "$file" 2>/dev/null; then
+                echo -e "${RED}⚠️  Potential secret found in: $file${NC}"
+                echo -e "${YELLOW}   Pattern matched: $pattern${NC}"
+                found_issues=$((found_issues + 1))
+            fi
+        done
+    fi
+done
+
+# Check for common credential filenames
+declare -a forbidden_files=(
+    '.env'
+    'id_rsa'
+    'id_dsa'
+    'id_ed25519'
+    '.aws/credentials'
+    'credentials'
+    'secrets.yml'
+    'secrets.yaml'
+)
+
+for file in $files; do
+    basename_file=$(basename "$file")
+    for forbidden in "${forbidden_files[@]}"; do
+        if [[ "$basename_file" == "$forbidden" ]] || [[ "$file" == *"$forbidden"* ]]; then
+            echo -e "${RED}⚠️  Forbidden file detected: $file${NC}"
+            echo -e "${YELLOW}   This file may contain secrets and should not be committed${NC}"
+            found_issues=$((found_issues + 1))
+        fi
+    done
+done
+
+if [ $found_issues -gt 0 ]; then
+    echo ""
+    echo -e "${RED}❌ Commit blocked: Potential secrets detected!${NC}"
+    echo ""
+    echo "If these are false positives, you can:"
+    echo "  1. Remove the detected secrets"
+    echo "  2. Use git commit --no-verify to bypass (NOT RECOMMENDED)"
+    echo "  3. Store secrets in ~/.env-vars instead (see SECURITY.md)"
+    echo ""
+    exit 1
+fi
+
+echo -e "${GREEN}✅ No secrets detected${NC}"
+exit 0
