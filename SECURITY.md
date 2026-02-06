@@ -20,8 +20,6 @@ A comprehensive security scan was performed on this repository with the followin
 
 This repository provides **two** options for storing secrets locally. Both files are NOT committed to the repository:
 
-**📚 For detailed guidance, see [Secret Files Guide](docs/SECRET_FILES_GUIDE.md)**
-
 
 #### Option A: `~/.localrc` (Legacy Pattern - Loaded First)
 - **Purpose**: General-purpose file for "SUPER SECRET CRAP" you don't want in your public repo

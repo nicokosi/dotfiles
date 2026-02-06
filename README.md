@@ -77,8 +77,6 @@ This repository is designed to keep your credentials safe. See [SECURITY.md](SEC
 
 **Important**: Never commit credentials directly. Use `~/.localrc` or `~/.env-vars` patterns described in the security documentation.
 
-**New to secret management?** See the [Secret Files Guide](docs/SECRET_FILES_GUIDE.md) for a detailed walkthrough.
-
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
