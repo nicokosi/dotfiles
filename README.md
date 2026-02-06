@@ -71,11 +71,11 @@ There's a few special files in the hierarchy.
 
 This repository is designed to keep your credentials safe. See [SECURITY.md](SECURITY.md) for details on:
 
-- How to securely store environment variables and API keys
+- How to securely store environment variables and API keys (using `~/.localrc` or `~/.env-vars`)
 - Pre-commit hooks to prevent accidental credential leaks
 - Security scan results and best practices
 
-**Important**: Never commit credentials directly. Use the `~/.env-vars` pattern described in the security documentation.
+**Important**: Never commit credentials directly. Use `~/.localrc` or `~/.env-vars` patterns described in the security documentation.
 
 ## bugs
 

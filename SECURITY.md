@@ -16,20 +16,59 @@ A comprehensive security scan was performed on this repository with the followin
 
 ## Secure Practices
 
-### 1. Environment Variables
+### 1. Environment Variables and Secret Storage
 
-This repository uses a secure pattern for handling environment variables:
+This repository provides **two** options for storing secrets locally. Both files are NOT committed to the repository:
 
-- **File**: `private/env-vars.zsh`
-- **Purpose**: Sources `~/.env-vars` file (which is NOT committed to the repository)
-- **Usage**: Store all sensitive environment variables in `~/.env-vars` on your local machine
+#### Option A: `~/.localrc` (Legacy Pattern - Loaded First)
+- **Purpose**: General-purpose file for "SUPER SECRET CRAP" you don't want in your public repo
+- **When loaded**: Very early in ZSH startup, before any dotfiles `.zsh` files
+- **Use for**: Any shell configuration or secrets (commands, aliases, exports, functions)
+- **Location**: `~/.localrc` in your home directory
+
+#### Option B: `~/.env-vars` (Recommended for Environment Variables)
+- **File**: `private/env-vars.zsh` (tracked in repo) sources `~/.env-vars` (NOT tracked)
+- **When loaded**: After `~/.localrc`, as part of the dotfiles loading process
+- **Use for**: Environment variables only (export statements)
+- **Location**: `~/.env-vars` in your home directory
+
+**Recommendation**: Use `~/.localrc` for general secret configuration, and `~/.env-vars` specifically for environment variable exports. If you only need one, `~/.localrc` is simpler since it's loaded first.
+
+Example `~/.localrc` file (create this locally, do NOT commit):
+```bash
+# Environment variables
+export GITHUB_TOKEN="your_token_here"
+export AWS_ACCESS_KEY_ID="your_key_here"
+
+# Private aliases
+alias work="cd ~/secret-work-dir"
+
+# Private functions
+function deploy_prod() {
+  # secret deployment logic
+}
+```
 
 Example `~/.env-vars` file (create this locally, do NOT commit):
 ```bash
+# Only environment variables
 export GITHUB_TOKEN="your_token_here"
 export AWS_ACCESS_KEY_ID="your_key_here"
 export AWS_SECRET_ACCESS_KEY="your_secret_here"
 ```
+
+**Note**: There is NO `~/env-vars.zsh` file. The file `private/env-vars.zsh` (in the dotfiles repo) loads `~/.env-vars` (no `.zsh` extension) from your home directory.
+
+#### Loading Order
+Understanding when each file is loaded:
+
+1. `~/.zshrc` (from `zsh/zshrc.symlink`) starts loading
+2. **`~/.localrc`** is sourced first (if it exists)
+3. All `**/*.zsh` files from `~/.dotfiles/` are sourced, including:
+   - `private/env-vars.zsh` which sources **`~/.env-vars`** (if it exists)
+4. Other dotfiles configuration continues
+
+This means `~/.localrc` variables are available before `~/.env-vars` variables.
 
 ### 2. Git Configuration
 
