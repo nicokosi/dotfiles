@@ -1,10 +1,12 @@
 bat                            @0.26.1_0 
 clojure                        @1.12.4.1582_0 
+clojure                        @1.12.4.1602_0 
 coreutils                      @9.5_1 
 curl                           @8.13.0_0+brotli+http2+idn+psl+ssl+zstd 
 diff-so-fancy                  @1.4.4_0 
 diskonaut                      @0.11.0_0 
 docker                         @28.3.3_0 
+docker                         @29.2.1_0 
 freeze                         @0.2.2_0 
 fzf                            @0.67.0_0 
 gh                             @2.86.0_0 
@@ -14,6 +16,7 @@ glow                           @2.1.1_1
 go                             @1.25.6_0 
 htop                           @3.4.1_0 
 hugo                           @0.154.5_0 
+hugo                           @0.155.2_0 
 jq                             @1.8.1_0 
 lazygit                        @0.56.0_0 
 leiningen                      @2.11.2_0 
@@ -21,7 +24,9 @@ libiconv                       @1.17_0
 lychee                         @0.21.0_0 
 mcfly                          @0.9.4_0 
 mise                           @2026.1.8_0 
+mise                           @2026.2.0_0 
 ncdu                           @2.9.2_0 
+ollama                         @0.15.2_0+completion 
 podman                         @5.7.1_0 
 podman-compose                 @1.5.0_0 
 presenterm                     @0.13.0_0 
@@ -35,7 +40,6 @@ uv                             @0.9.26_0
 wget                           @1.25.0_1+gnutls 
 yt-dlp                         @2025.12.08_0+ffmpeg+js_runtime+python313 
 z                              @1.12_0 
-zed                            @1.18.0_0 
 zenith                         @0.14.2_0 
 zola                           @0.22.1_0 
 zsh                            @5.9_3 
