@@ -1,5 +1,6 @@
 alias dockersw="DOCKER_HOST=\"tcp://dockersw.vidal.net:4243\" docker"
 alias dockerbo="DOCKER_HOST=\"tcp://dockerbo.vidal.net:4243\" docker"
+alias dockertestsims="DOCKER_HOST=\"tcp://srv-vid-tux242.france.groupe.intra\" docker
 
 alias ctop-dockersw="DOCKER_HOST=\"tcp://dockersw.vidal.net:4243\" ctop -a"
 alias ctop-dockerbo="DOCKER_HOST=\"tcp://dockerbo.vidal.net:4243\" ctop -a"
