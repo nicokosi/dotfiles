@@ -6,3 +6,44 @@ atom.symlink/storage
 atom.symlink/themes
 cache
 git/gitconfig.symlink
+
+# Sensitive files and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ed25519
+*_rsa
+*_dsa
+*_ed25519
+*.ppk
+credentials
+secrets.yml
+secrets.yaml
+secret.yml
+secret.yaml
+.secrets
+.credentials
+*.kdbx
+*.asc
+*.gpg
+
+# Application-specific credentials
+.aws/credentials
+.docker/config.json
+.npmrc
+.pypirc
+.gem/credentials
+.netrc
+# Note: .env-vars is for the local ~/.env-vars file
+# The file private/env-vars.zsh is intentionally tracked (it only sources ~/.env-vars)
+.env-vars
+# Note: .localrc is for the local ~/.localrc file (see zsh/zshrc.symlink)
+.localrc
+
+# SSH configuration (may contain sensitive host info)
+.ssh/config
