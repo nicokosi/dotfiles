@@ -46,6 +46,7 @@ cask_args appdir: "/Applications"
 # brew "mcfly"
 # brew "macvim", args: ['override-system-vim']
 # brew "mas"
+brew "mise"
 # brew "node"
 # brew "nushell"
 # brew "openssl"
