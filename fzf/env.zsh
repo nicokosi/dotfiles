@@ -1,2 +1,2 @@
-source /opt/local/share/fzf/shell/completion.zsh
-source /opt/local/share/fzf/shell/key-bindings.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
