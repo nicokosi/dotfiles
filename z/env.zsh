@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-. /opt/local/etc/profile.d/z.sh
+. /usr/local/Cellar/z/1.12/etc/profile.d/z.sh
