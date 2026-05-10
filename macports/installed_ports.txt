@@ -1,3 +1,4 @@
 curl                           @8.19.0_0+brotli+http2+idn+psl+ssl+zstd 
-go                             @1.26.1_0 
+go                             @1.26.2_0 
+go                             @1.26.3_0 
 libiconv                       @1.18_0 
