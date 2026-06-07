@@ -55,3 +55,8 @@ unset config_files
 # Add JBang to environment
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/nicolas/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
