@@ -1,0 +1,11 @@
+set -gx ZSH $HOME/.dotfiles
+
+if test -f ~/.localrc.fish
+    source ~/.localrc.fish
+end
+
+for file in $ZSH/fish/conf.d/*.fish
+    if test -f $file
+        source $file
+    end
+end
