@@ -24,3 +24,5 @@
 .idea
 
 .serena
+
+.github/hooks/rtk-rewrite.json
