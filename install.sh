@@ -10,29 +10,33 @@ if ! command -v stow &>/dev/null; then
   exit 1
 fi
 
-# Check fish is available
+# 2. Check fish is available
 if ! command -v fish &>/dev/null; then
   echo "ERROR: fish shell is not installed."
-  echo "See https://fishshell.com for installation instructions."
+  echo "Install it with: sudo apt install fish  OR  brew install fish"
+  echo "See https://fishshell.com for more options."
   exit 1
 fi
 
-# 2. Stow fish package
+# 3. Stow fish package
 echo "→ Stowing fish config..."
 cd "$DOTFILES"
 stow --verbose --restow fish || {
-  echo "ERROR: stow failed. If target files already exist, remove them first:"
-  echo "  rm ~/.config/fish/config.fish ~/.config/fish/fish_plugins"
+  echo "ERROR: stow failed — a conflicting file already exists."
+  echo "Remove conflicting files under ~/.config/fish/ then re-run:"
+  echo "  rm -rf ~/.config/fish/config.fish ~/.config/fish/fish_plugins"
+  echo "Or let stow take ownership (review diff after):"
+  echo "  stow --adopt fish && git diff"
   exit 1
 }
 
-# 3. Install fisher if not present
+# 4. Install fisher if not present
 if ! fish -c "type -q fisher" &>/dev/null; then
   echo "→ Installing fisher..."
   fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 fi
 
-# 4. Install plugins
+# 5. Install plugins
 echo "→ Installing fish plugins..."
 fish -c "fisher update"
 
