@@ -20,6 +20,7 @@ fi
 
 # 3. Stow fish package
 echo "→ Stowing fish config..."
+mkdir -p ~/.config/fish/conf.d
 cd "$DOTFILES"
 stow --verbose --restow fish || {
   echo "ERROR: stow failed — a conflicting file already exists."
