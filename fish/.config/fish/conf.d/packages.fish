@@ -14,7 +14,7 @@ end
 
 function _packages_capture_snap
     set -l dotfiles (_packages_dotfiles_root)
-    snap list | awk 'NR>1 && $5 !~ /canonical/ {print $1}' > $dotfiles/packages/snap.txt
+    command snap list | awk 'NR>1 && $5 !~ /canonical/ {print $1}' > $dotfiles/packages/snap.txt
     git -C $dotfiles add packages/snap.txt
     git -C $dotfiles diff --cached --quiet
     or git -C $dotfiles commit -m "chore: update snap packages"
@@ -22,14 +22,18 @@ end
 
 function brew
     command brew $argv
-    if contains -- $argv[1] install remove uninstall
+    set -l exit_code $status
+    if test $exit_code -eq 0; and contains -- $argv[1] install remove uninstall
         _packages_capture_brew
     end
+    return $exit_code
 end
 
 function snap
     command snap $argv
-    if contains -- $argv[1] install remove
+    set -l exit_code $status
+    if test $exit_code -eq 0; and contains -- $argv[1] install remove
         _packages_capture_snap
     end
+    return $exit_code
 end
