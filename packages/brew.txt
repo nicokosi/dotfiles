@@ -3,6 +3,7 @@ diff-so-fancy
 docker
 docker-agent
 docker-engine
+eza
 fisher
 gcc
 gh
