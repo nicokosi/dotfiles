@@ -1,0 +1,16 @@
+diff-so-fancy
+docker
+docker-agent
+docker-engine
+fisher
+gcc
+gh
+lazydocker
+lazygit
+mise
+rootlesskit
+slirp4netns
+the_silver_searcher
+tig
+tldr
+tree
