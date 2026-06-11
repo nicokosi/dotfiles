@@ -41,5 +41,19 @@ fi
 echo "→ Installing fish plugins..."
 fish -c "fisher update"
 
+# 6. Install brew packages
+if command -v brew &>/dev/null && [ -f "$DOTFILES/packages/brew.txt" ]; then
+  echo "→ Installing brew packages..."
+  xargs brew install < "$DOTFILES/packages/brew.txt"
+fi
+
+# 7. Install snap packages
+if command -v snap &>/dev/null && [ -f "$DOTFILES/packages/snap.txt" ]; then
+  echo "→ Installing snap packages..."
+  while IFS= read -r pkg; do
+    snap install "$pkg" || echo "  WARNING: snap install $pkg failed (may need --classic or --edge)"
+  done < "$DOTFILES/packages/snap.txt"
+fi
+
 echo ""
 echo "✓ Done! Run 'tide configure' to set up your prompt."
