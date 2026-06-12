@@ -5,6 +5,7 @@ docker-agent
 docker-engine
 eza
 fisher
+fzf
 gcc
 gh
 gist
