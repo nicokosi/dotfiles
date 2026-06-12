@@ -7,6 +7,7 @@ eza
 fisher
 gcc
 gh
+gist
 lazydocker
 lazygit
 mise
