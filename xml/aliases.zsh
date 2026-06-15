@@ -1,1 +1,0 @@
-alias formatxml="xmllint --format -"

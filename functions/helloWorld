@@ -1,4 +1,0 @@
-helloWorld() {
-  echo "Hello world! 👋"
-}
-
