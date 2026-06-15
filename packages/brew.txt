@@ -16,6 +16,7 @@ mise
 rootlesskit
 slirp4netns
 stow
+tealdeer
 the_silver_searcher
 tig
 tldr
