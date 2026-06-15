@@ -1,3 +1,4 @@
+abbr -a g git
 abbr -a ga git add
 abbr -a gap git add -p
 abbr -a gco git checkout
@@ -5,6 +6,7 @@ abbr -a gcp git cherry-pick
 abbr -a gc  git commit
 abbr -a gd  git diff
 abbr -a gl  git pull
+abbr -a glo git log --oneline
 abbr -a gp  git push
 abbr -a gpf git push --force-with-lease
 abbr -a gr git rebase
