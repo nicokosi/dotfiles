@@ -3,3 +3,5 @@ firefox
 ghostty
 intellij-idea-ultimate
 pycharm-professional
+spotify
+sublime-text
