@@ -9,6 +9,7 @@ fzf
 gcc
 gh
 gist
+gradle
 lazydocker
 lazygit
 mise
