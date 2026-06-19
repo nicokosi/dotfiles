@@ -12,6 +12,7 @@ gist
 gradle
 lazydocker
 lazygit
+mcfly
 mise
 rootlesskit
 slirp4netns
