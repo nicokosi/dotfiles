@@ -30,9 +30,6 @@ disk-cleanup() {
   ls ~/.ivy2/cache | xargs rm -rf
   print "Ivy cleanup 🐜\n"
 
-  sdk flush archives && sdk flush broadcast && sdk flush temp
-  print "SDKMAN! cleanup 🦸\n"
-
   print "Space after cleanup:"
   df -h | grep "/dev/disk1"
 }

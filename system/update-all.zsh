@@ -15,7 +15,5 @@ update-all() {
 	echo_and_run rustup update
 	echo "Rust env updated!"
 
-	echo-in-blue "Update Java env... (may prompt for default version)"
-	echo_and_run sdk selfupdate && sdk update && sdk upgrade
-	echo-in-green "Java env updated!"
+
 }

@@ -66,12 +66,6 @@ function update-all
     echo-in-blue "Update Rust env..."
     echo_and_run rustup update
     echo "Rust env updated!"
-
-    echo-in-blue "Update Java env... (may prompt for default version)"
-    echo_and_run sdk selfupdate
-    and echo_and_run sdk update
-    and echo_and_run sdk upgrade
-    echo-in-green "Java env updated!"
 end
 
 function disk-cleanup
@@ -117,11 +111,6 @@ function disk-cleanup
         end
     end
     echo "Ivy cleanup 🐜\n"
-
-    sdk flush archives
-    sdk flush broadcast
-    sdk flush temp
-    echo "SDKMAN! cleanup 🦸\n"
 
     echo "Space after cleanup:"
     df -h | grep '/dev/disk1'
