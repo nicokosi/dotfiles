@@ -20,3 +20,6 @@ mkdir -p ~/.config/fish
 mkdir -p ~/.config/fish/conf.d
 mkdir -p ~/.config/fish/functions
 ln -sf "$DOTFILES_DIR/fish/config.fish.symlink" ~/.config/fish/config.fish
+
+brew reinstall zoxide
+zoxide init fish | source
