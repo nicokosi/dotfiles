@@ -1,6 +1,7 @@
 abbr -a g git
 abbr -a ga git add
 abbr -a gap git add -p
+abbr -a gbr git branch --remote
 abbr -a gc git commit
 abbr -a gco git checkout
 abbr -a gcp git cherry-pick
