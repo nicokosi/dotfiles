@@ -34,6 +34,14 @@ function dockersw2
         $argv
 end
 
+function gdl
+    if test -e ./gradlew
+        ./gradlew $argv
+    else
+        gradle $argv
+    end
+end
+
 # Maven / XML aliases
 alias mvn-deps-tree-vidal="mvn dependency:tree -Dincludes='com.vidal*:*:*:*'"
 alias mvn-version="xmlstarlet sel -N ns='http://maven.apache.org/POM/4.0.0' -t -c '/ns:project/ns:version/text()' -n pom.xml"
