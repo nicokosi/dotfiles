@@ -1,7 +1,0 @@
-:filetype plugin on
-autocmd FileType gitcommit setlocal spell
-set backupdir=/tmp
-set directory=/tmp
-set number
-set ruler
-syntax on

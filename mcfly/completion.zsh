@@ -1,2 +1,0 @@
-eval "$(mcfly init zsh)"
-
