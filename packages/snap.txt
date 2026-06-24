@@ -1,6 +1,5 @@
 bitwarden
 firefox
 ghostty
-pycharm-professional
 spotify
 sublime-text
