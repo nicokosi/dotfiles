@@ -149,23 +149,3 @@ function gifify
 
     ffmpeg -i "$input" -r "$rate" "$output"
 end
-
-function check-viruses
-    echo-in-blue "Upgrading virus definitions..."
-    freshclam
-
-    if test (count $argv) -ge 1
-        set -l target $argv[1]
-        echo-in-blue "Scanning $target..."
-        sudo clamscan --bell --infected --recursive "$target"
-        echo-in-green "Analyzed folder $target"
-    else
-        echo-in-blue "Scanning root dir..."
-        for folder in (find / -maxdepth 1 -type d -print | grep -v '^/$')
-            sudo clamscan --bell --infected --recursive "$folder"
-            echo-in-green "Analyzed folder $folder"
-        end
-    end
-
-    echo-in-green "Done!"
-end
