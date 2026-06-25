@@ -2,6 +2,7 @@ bat
 diff-so-fancy
 docker
 docker-agent
+docker-buildx
 docker-engine
 eza
 fisher
