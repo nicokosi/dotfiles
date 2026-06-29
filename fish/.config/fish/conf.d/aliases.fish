@@ -14,3 +14,10 @@ abbr -a gpf git push --force-with-lease
 abbr -a gr git rebase
 abbr -a gst git status
 abbr -a l eza
+abbr -a open xdg-open
+function apt-all-upgrades
+    sudo apt update && sudo apt upgrade && sudo apt-get autoremove
+end
+function upgrade-everything
+  apt-all-upgrades && brew upgrade && mise upgrade && gh extension upgrade --all
+end
