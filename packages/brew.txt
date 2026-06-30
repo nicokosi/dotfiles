@@ -11,6 +11,7 @@ gcc
 gh
 gist
 gradle
+jbang
 lazydocker
 lazygit
 mcfly
