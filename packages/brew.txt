@@ -18,6 +18,7 @@ mcfly
 mise
 mongosh
 rootlesskit
+rtk
 slirp4netns
 stow
 tealdeer
