@@ -16,6 +16,7 @@ jbang
 lazydocker
 lazygit
 mcfly
+micro
 mise
 mongosh
 rootlesskit
