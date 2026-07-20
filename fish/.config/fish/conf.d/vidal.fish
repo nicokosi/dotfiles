@@ -1,8 +1,12 @@
 # Vidal env vars
 set -gx INSTALL4J_HOME_5_1_15 "/opt/install4j5"
 set -gx INSTALL4J_HOME_7_0_9 "/opt/install4j7"
+
+# exploradora settings
 set -gx OTEL_EXPORTER_OTLP_ENDPOINT "http://otel.dockersw.vidal.net"
-set -gx AGENTSVIEW_PG_URL "postgres://agentsview:agentsview@dockersw.vidal.net:5432/agentsview?sslmode=require"
+set -gx AGENTSVIEW_PG_URL "postgres://agentsview:agentsview@dockersw.vidal.net:5432/agentsview?sslmode=require" # agentsview pushes to postgres
+set -gx COPILOT_DIR "~/.copilot/jetbrains-sessions" # agentsview reads this folder
+
 # For npm front-end tests that require Chrome:
 set -gx CHROME_BIN "/opt/google/chrome/chrome"
 
