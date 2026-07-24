@@ -13,6 +13,7 @@ gist
 gradle
 httpie
 jbang
+jcgay/jcgay/glane
 lazydocker
 lazygit
 mcfly
