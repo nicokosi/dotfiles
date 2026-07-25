@@ -24,6 +24,7 @@ rootlesskit
 rtk
 slirp4netns
 stow
+syncthing
 tealdeer
 the_silver_searcher
 tig
