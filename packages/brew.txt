@@ -20,6 +20,7 @@ mcfly
 micro
 mise
 mongosh
+ollama
 rootlesskit
 rtk
 slirp4netns
