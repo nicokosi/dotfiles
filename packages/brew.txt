@@ -11,13 +11,13 @@ gcc
 gh
 gist
 gradle
+herdr
 htop
 httpie
 jbang
 jcgay/jcgay/glane
 lazydocker
 lazygit
-libxt
 mcfly
 micro
 mise
@@ -34,5 +34,4 @@ tig
 tldr
 tree
 volta
-zip
 zoxide
