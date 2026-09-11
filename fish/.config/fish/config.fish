@@ -3,5 +3,6 @@ if status is-interactive
     zoxide init fish | source
     mcfly init fish | source
     eval "$(mise activate fish)"
+    source $HOME/.local/share/../bin/env.fish
 end
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
