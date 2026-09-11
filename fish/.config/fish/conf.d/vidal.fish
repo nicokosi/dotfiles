@@ -13,11 +13,11 @@ set -gx CHROME_BIN "/opt/google/chrome/chrome"
 
 # Docker remote host wrappers (inline VAR=val not supported in fish)
 function dockersw
-    env DOCKER_HOST="tcp://dockersw.vidal.net:4243" docker $argv
+    env DOCKER_HOST="tcp://dockersw.vidal.net:4243" DOCKER_API_VERSION="1.39" docker $argv
 end
 
 function dockerbo
-    env DOCKER_HOST="tcp://dockerbo.vidal.net:4243" docker $argv
+    env DOCKER_HOST="tcp://dockerbo.vidal.net:4243" DOCKER_API_VERSION="1.39" docker $argv
 end
 
 function dockertestsims
