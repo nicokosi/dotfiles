@@ -1,3 +1,6 @@
+set -gx GOPATH $HOME/go
+set -Ux fish_user_paths $GOPATH/bin $fish_user_paths
+
 # Temporarily switch to a minimal shell prompt
 function minimalShellPrompt
     function fish_prompt
