@@ -26,6 +26,7 @@ mongosh
 ollama
 rootlesskit
 rtk
+shellspec
 slirp4netns
 stow
 syncthing
