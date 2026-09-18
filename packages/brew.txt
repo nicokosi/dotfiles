@@ -10,6 +10,7 @@ fzf
 gcc
 gh
 gist
+glow
 go
 gradle
 herdr
@@ -35,6 +36,5 @@ the_silver_searcher
 tig
 tldr
 tree
-usage
 volta
 zoxide
