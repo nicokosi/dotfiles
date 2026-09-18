@@ -8,6 +8,11 @@ set -gx AGENTSVIEW_PG_URL "postgres://agentsview:agentsview@dockersw.vidal.net:5
 set -gx AGENTSVIEW_PG_MACHINE "nicokosi" # instead of m machine name
 set -gx COPILOT_DIR "~/.copilot/jetbrains-sessions" # agentsview reads this folder
 
+# jcgay/glane settings (secrets live in ~/.config/fish/conf.d/local.fish, not versioned)
+set -gx MASTODON_INSTANCE_URL "https://fosstodon.org"
+set -gx GLANE_SUMMARY_URL "http://localhost:11434/v1"   # e.g. Ollama
+set -gx GLANE_SUMMARY_MODEL "gemma3"
+
 # For npm front-end tests that require Chrome:
 set -gx CHROME_BIN "/opt/google/chrome/chrome"
 
