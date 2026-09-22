@@ -13,6 +13,7 @@ gist
 glow
 go
 gradle
+hashicorp/tap/vagrant
 herdr
 htop
 httpie
