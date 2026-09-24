@@ -31,17 +31,30 @@ stow --verbose --restow fish || {
   exit 1
 }
 
-# 4. Install fisher if not present
+# 4. Stow github package (Copilot instructions)
+echo "→ Stowing github config..."
+mkdir -p ~/.github
+cd "$DOTFILES"
+stow --verbose --restow github || {
+  echo "ERROR: stow failed — a conflicting file already exists."
+  echo "Remove conflicting files under ~/.github/ then re-run:"
+  echo "  rm -f ~/.github/copilot-instructions.md"
+  echo "Or let stow take ownership (review diff after):"
+  echo "  stow --adopt github && git diff"
+  exit 1
+}
+
+# 5. Install fisher if not present
 if ! fish -c "type -q fisher" &>/dev/null; then
   echo "→ Installing fisher..."
   fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 fi
 
-# 5. Install plugins
+# 6. Install plugins
 echo "→ Installing fish plugins..."
 fish -c "fisher update"
 
-# 6. Install brew packages
+# 7. Install brew packages
 if command -v brew &>/dev/null && [ -f "$DOTFILES/packages/brew.txt" ]; then
   echo "→ Installing brew packages..."
   while IFS= read -r pkg; do
@@ -50,7 +63,7 @@ if command -v brew &>/dev/null && [ -f "$DOTFILES/packages/brew.txt" ]; then
   done < "$DOTFILES/packages/brew.txt"
 fi
 
-# 7. Install snap packages
+# 8. Install snap packages
 if command -v snap &>/dev/null && [ -f "$DOTFILES/packages/snap.txt" ]; then
   echo "→ Installing snap packages..."
   while IFS= read -r pkg; do

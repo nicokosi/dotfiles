@@ -24,6 +24,7 @@ Then run `tide configure` to set up the prompt appearance.
 | Package | Path | Description |
 |---------|------|-------------|
 | `fish` | `~/.config/fish/` | Fish shell config + fisher plugins |
+| `github` | `~/.github/copilot-instructions.md` | Personal GitHub Copilot instructions |
 
 ### Adding a new tool
 
