@@ -1,6 +1,6 @@
 # Vidal env vars
 set -Ux INSTALL4J_HOME_7_0_9 "/opt/install4j7.0.9"
-set -Ux INSTALL4J_HOME_8_0_11 "/opt/install4j8.0.11/"
+set -Ux INSTALL4J_HOME_8_0_11 "/opt/install4j8.0.11"
 
 # exploradora settings
 set -gx OTEL_EXPORTER_OTLP_ENDPOINT "http://otel.dockersw.vidal.net"
