@@ -15,6 +15,9 @@ abbr -a gr git rebase
 abbr -a gst git status
 abbr -a l eza
 abbr -a open xdg-open
+
+abbr -a c copilot
+
 function apt-all-upgrades
     sudo apt update && sudo apt upgrade && sudo apt-get autoremove
 end
