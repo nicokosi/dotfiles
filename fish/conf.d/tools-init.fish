@@ -5,7 +5,7 @@ end
 
 # mise: dev tools version manager
 if command -sq mise
-    /usr/local/bin/mise activate fish | source
+    /opt/local/bin/mise activate fish | source
 end
 
 # mcfly: enhanced shell history search
