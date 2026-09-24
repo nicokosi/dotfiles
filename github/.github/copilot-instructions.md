@@ -68,7 +68,7 @@ including on `master`/`main`. Push still only when I ask.
   Take the exact string from the harness instructions of the running session; if
   the harness gives no context size, drop the parentheses entirely.
 - Last line of every PR body:
-  `🤖 Generated with [Claude Code](https://github.com/copilot)`
+  `🤖 Generated with [GitHub Copilot](https://github.com/copilot)`
 
 ## Never
 
