@@ -9,3 +9,6 @@ for file in $ZSH/fish/conf.d/*.fish
         source $file
     end
 end
+
+# uv
+fish_add_path "/Users/nicolas/.local/bin"
