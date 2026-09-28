@@ -62,7 +62,7 @@ including on `master`/`main`. Push still only when I ask.
 
 - `Closes #123.` for a GitHub issue, `See MERLIN-2303.` for a Jira reference.
 - Last trailer of every commit message:
-  `Co-Authored-By: Copilot <MODEL_NAME> (<CONTEXT_SIZE>) <noreply@anthropic.com>`
+  `Co-Authored-By: Copilot <MODEL_NAME> (<CONTEXT_SIZE>) <223556219+Copilot@users.noreply.github.com>`
   where `<MODEL_NAME>` and `<CONTEXT_SIZE>` are the *current* session's model, not
   a hardcoded one — e.g. `Claude Opus 5 (1M context)`, `Claude Sonnet 5 (200k context)`.
   Take the exact string from the harness instructions of the running session; if
