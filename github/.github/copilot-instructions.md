@@ -70,6 +70,13 @@ including on `master`/`main`. Push still only when I ask.
 - Last line of every PR body:
   `🤖 Generated with [GitHub Copilot](https://github.com/copilot)`
 
+## Review feedback
+
+Changes asked for in a code review go in `git commit --fixup=<sha>`
+commits, one per commit being corrected (find it with `git blame` /
+`git log -L`), never in a new standalone commit. Don't autosquash them:
+I run `git rebase -i --autosquash` myself.
+
 ## Never
 
 - Don't push unless asked.
