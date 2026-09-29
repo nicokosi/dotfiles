@@ -31,6 +31,7 @@ rootlesskit
 rtk
 shellspec
 slirp4netns
+static-var/tap/build-brief
 stow
 syncthing
 tealdeer
