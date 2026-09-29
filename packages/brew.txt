@@ -27,7 +27,6 @@ micro
 mise
 mongosh
 ollama
-openjdk@25
 rootlesskit
 rtk
 shellspec
@@ -39,6 +38,5 @@ the_silver_searcher
 tig
 tldr
 tree
-unzip
 volta
 zoxide
