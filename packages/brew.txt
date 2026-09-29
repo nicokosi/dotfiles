@@ -27,6 +27,7 @@ micro
 mise
 mongosh
 ollama
+openjdk@25
 rootlesskit
 rtk
 shellspec
