@@ -65,4 +65,9 @@ printf '%s' "$RESET"
 
 # --- context window usage (plain grey text after the prompt) ----------------
 ctx=$(printf '%s' "$input" | jq -r '.context_window.used_percentage // empty' 2>/dev/null)
-[ -n "$ctx" ] && { fg '136;138;133'; printf ' ctx %.0f%%' "$ctx"; printf '%s' "$RESET"; }
+if [ -n "$ctx" ]; then
+  ctx=$(printf '%.0f' "$ctx")
+  ctx_color='136;138;133'
+  [ "$ctx" -gt 80 ] && ctx_color="$GIT_BG_URGENT"
+  fg "$ctx_color"; printf ' ctx %s%%' "$ctx"; printf '%s' "$RESET"
+fi
