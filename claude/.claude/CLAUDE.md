@@ -1,4 +1,5 @@
 @RTK.md
+@GIT.md
 
 <!-- build-brief:instructions:start -->
 ## build-brief
