@@ -44,6 +44,19 @@ stow --verbose --restow github || {
   exit 1
 }
 
+# 4b. Stow claude package (Claude Code config)
+echo "→ Stowing claude config..."
+mkdir -p ~/.claude
+cd "$DOTFILES"
+stow --verbose --restow claude || {
+  echo "ERROR: stow failed — a conflicting file already exists."
+  echo "Remove conflicting files under ~/.claude/ then re-run:"
+  echo "  rm -f ~/.claude/{settings.json,CLAUDE.md,RTK.md,statusline-command.sh}"
+  echo "Or let stow take ownership (review diff after):"
+  echo "  stow --adopt claude && git diff"
+  exit 1
+}
+
 # 5. Install fisher if not present
 if ! fish -c "type -q fisher" &>/dev/null; then
   echo "→ Installing fisher..."

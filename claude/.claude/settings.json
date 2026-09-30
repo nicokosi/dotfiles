@@ -1,0 +1,55 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "superpowers-developing-for-claude-code@superpowers-marketplace": true,
+    "humanizer@humanizer": true,
+    "build-brief@build-brief-local": true,
+    "mattpocock-skills@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    },
+    "build-brief-local": {
+      "source": {
+        "source": "directory",
+        "path": "/home/nkosinski@france.groupe.intra/.claude/marketplaces/build-brief"
+      }
+    }
+  },
+  "language": "Français",
+  "theme": "dark",
+  "autoContinueAtUsageLimit": false
+}
