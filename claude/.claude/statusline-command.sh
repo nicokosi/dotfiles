@@ -62,3 +62,7 @@ else
   printf '%s' "$RESET"; fg "$PWD_BG"; printf '%s' "$SUFFIX"
 fi
 printf '%s' "$RESET"
+
+# --- context window usage (plain grey text after the prompt) ----------------
+ctx=$(printf '%s' "$input" | jq -r '.context_window.used_percentage // empty' 2>/dev/null)
+[ -n "$ctx" ] && { fg '136;138;133'; printf ' ctx %.0f%%' "$ctx"; printf '%s' "$RESET"; }
