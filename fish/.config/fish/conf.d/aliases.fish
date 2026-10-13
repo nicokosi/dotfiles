@@ -16,7 +16,7 @@ abbr -a gst git status
 abbr -a l eza
 abbr -a open xdg-open
 
-abbr -a c copilot
+abbr -a c claude
 
 function apt-all-upgrades
     sudo apt update && sudo apt upgrade && sudo apt-get autoremove
