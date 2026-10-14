@@ -33,6 +33,9 @@ including on `master`/`main`. Push still only when I ask.
 ## Footer
 
 - `Closes #123.` for a GitHub issue, `See MERLIN-2303.` for a Jira reference.
+  Skip the Jira footer when the subject already carries the ticket prefix.
+- `Closes #456.` for the pull request the commit belongs to, once it exists
+  (amend the commit after opening the PR).
 - End commit messages and PR bodies with the attribution lines Claude Code
   gives in its system reminder (current model, not a hardcoded one).
 
