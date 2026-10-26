@@ -1,6 +1,14 @@
 @RTK.md
 @GIT.md
 
+## Acting on GitHub under my account
+
+Anything you post to GitHub with my credentials (`gh`, API, MCP) must show
+it comes from you, not me: PR/issue comments, review comments, reviews,
+issue bodies, replies. End the text with a blank line then `🤖 nico-claude`.
+PR descriptions already carry the Claude Code attribution line; don't add
+both.
+
 <!-- build-brief:instructions:start -->
 ## build-brief
 
