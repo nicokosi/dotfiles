@@ -2,6 +2,7 @@
 set -Ux INSTALL4J_HOME_7_0_9 "/opt/install4j7.0.9"
 set -Ux INSTALL4J_HOME_8_0_11 "/opt/install4j8.0.11"
 set -Ux INSTALL4J_HOME_11_0_5 "/opt/install4j11"
+set -Ux INSTALL4J_HOME_13_1_1 "/opt/install4j13/"
 set -Ux VAGRANT_HOME "/opt/vagrant-boxes/"
 
 # exploradora settings
