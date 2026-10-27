@@ -11,14 +11,14 @@
         ]
       },
       {
+        "matcher": "Read",
         "hooks": [
           {
             "type": "command",
             "command": "'/home/nkosinski@france.groupe.intra/.claude/hooks/sonar-secrets/build-scripts/pretool-secrets.sh'",
             "timeout": 60
           }
-        ],
-        "matcher": "Read"
+        ]
       }
     ],
     "SessionStart": [
@@ -35,14 +35,14 @@
     ],
     "UserPromptSubmit": [
       {
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
             "command": "'/home/nkosinski@france.groupe.intra/.claude/hooks/sonar-secrets/build-scripts/prompt-secrets.sh'",
             "timeout": 60
           }
-        ],
-        "matcher": "*"
+        ]
       }
     ]
   },
@@ -50,33 +50,29 @@
     "type": "command",
     "command": "~/.claude/statusline-command.sh"
   },
+  "subagentStatusLine": {
+    "type": "command",
+    "command": "node \"/home/nkosinski@france.groupe.intra/.claude/harnais/subagent-statusline.mjs\""
+  },
   "enabledPlugins": {
-    "ponytail@ponytail": true,
     "superpowers-developing-for-claude-code@superpowers-marketplace": true,
-    "humanizer@humanizer": true,
     "build-brief@build-brief-local": true,
     "mattpocock-skills@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
     "harnais@harnais": true,
-    "superpowers@harnais": true
+    "superpowers@harnais": true,
+    "ponytail@harnais": true,
+    "impeccable@harnais": true,
+    "humanizer@harnais": true,
+    "jk@harnais": true,
+    "gradle-skills@harnais": true,
+    "docker-skills@harnais": true,
+    "plannotator@harnais": true
   },
   "extraKnownMarketplaces": {
-    "ponytail": {
-      "source": {
-        "source": "github",
-        "repo": "DietrichGebert/ponytail"
-      }
-    },
     "superpowers-marketplace": {
       "source": {
         "source": "github",
         "repo": "obra/superpowers-marketplace"
-      }
-    },
-    "humanizer": {
-      "source": {
-        "source": "github",
-        "repo": "blader/humanizer"
       }
     },
     "build-brief-local": {
@@ -95,7 +91,8 @@
       "source": {
         "source": "github",
         "repo": "softwarevidal/harnais"
-      }
+      },
+      "autoUpdate": true
     }
   },
   "language": "Français",
