@@ -27,6 +27,7 @@ micro
 mise
 mongosh
 ollama
+playwright-cli
 rootlesskit
 rtk
 shellspec
