@@ -9,6 +9,16 @@
             "command": "rtk hook claude"
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/home/nkosinski@france.groupe.intra/.claude/hooks/sonar-secrets/build-scripts/pretool-secrets.sh'",
+            "timeout": 60
+          }
+        ],
+        "matcher": "Read"
       }
     ],
     "SessionStart": [
@@ -22,6 +32,18 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/home/nkosinski@france.groupe.intra/.claude/hooks/sonar-secrets/build-scripts/prompt-secrets.sh'",
+            "timeout": 60
+          }
+        ],
+        "matcher": "*"
+      }
     ]
   },
   "statusLine": {
@@ -34,7 +56,9 @@
     "humanizer@humanizer": true,
     "build-brief@build-brief-local": true,
     "mattpocock-skills@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "harnais@harnais": true,
+    "superpowers@harnais": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
@@ -59,6 +83,18 @@
       "source": {
         "source": "directory",
         "path": "/home/nkosinski@france.groupe.intra/.claude/marketplaces/build-brief"
+      }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    "harnais": {
+      "source": {
+        "source": "github",
+        "repo": "softwarevidal/harnais"
       }
     }
   },
