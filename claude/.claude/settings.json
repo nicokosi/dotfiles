@@ -11,14 +11,14 @@
         ]
       },
       {
-        "matcher": "Read",
         "hooks": [
           {
             "type": "command",
             "command": "'/home/nkosinski@france.groupe.intra/.claude/hooks/sonar-secrets/build-scripts/pretool-secrets.sh'",
             "timeout": 60
           }
-        ]
+        ],
+        "matcher": "Read"
       }
     ],
     "SessionStart": [
@@ -35,14 +35,14 @@
     ],
     "UserPromptSubmit": [
       {
-        "matcher": "*",
         "hooks": [
           {
             "type": "command",
             "command": "'/home/nkosinski@france.groupe.intra/.claude/hooks/sonar-secrets/build-scripts/prompt-secrets.sh'",
             "timeout": 60
           }
-        ]
+        ],
+        "matcher": "*"
       }
     ]
   },
