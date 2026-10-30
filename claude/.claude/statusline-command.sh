@@ -23,5 +23,5 @@ MINS=$((DURATION_MS / 60000)); SECS=$(((DURATION_MS % 60000) / 1000))
 BRANCH=""
 git rev-parse --git-dir > /dev/null 2>&1 && BRANCH="/$(git branch --show-current 2>/dev/null)"
 
+COST_FMT=$(LC_NUMERIC=C printf '$%.2f' "$COST")
 echo -e "${CYAN}$MODEL${RESET} ${DIR##*/}$BRANCH 🌡 ${BAR_COLOR}${BAR}${RESET} ${PCT}% ${YELLOW}${COST_FMT}${RESET} ⏳ ${MINS}m ${SECS}s"
-COST_FMT=$(printf '$%.2f' "$COST")
