@@ -67,7 +67,10 @@
     "gradle-skills@harnais": true,
     "docker-skills@harnais": true,
     "plannotator@harnais": true,
-    "superpowers@claude-plugins-official": true
+    "merlin@harnais": true,
+    "context7@claude-plugins-official": true,
+    "sonarqube@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "superpowers-marketplace": {
