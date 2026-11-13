@@ -495,5 +495,13 @@
       "Sous-produit d’ectoplasme",
       "Tonnerre de Brest"
     ]
+  },
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+    "OTEL_METRICS_EXPORTER": "otlp",
+    "OTEL_LOGS_EXPORTER": "none",
+    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
+    "OTEL_EXPORTER_OTLP_ENDPOINT": "http://otel.dockersw.vidal.net",
+    "OTEL_METRICS_INCLUDE_REPOSITORY": "true"
   }
 }
