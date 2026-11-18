@@ -42,4 +42,5 @@ tig
 tldr
 tree
 volta
+worktrunk
 zoxide
