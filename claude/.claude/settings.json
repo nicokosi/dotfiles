@@ -105,8 +105,7 @@
       "source": {
         "source": "github",
         "repo": "softwarevidal/harnais"
-      },
-      "autoUpdate": true
+      }
     },
     "plannotator": {
       "source": {
