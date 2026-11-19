@@ -72,9 +72,9 @@ export default class Prs extends View {
           .flex_none()
           .px(6)
           .rounded(5)
-          .bg(t.done + "26")
+          .bg(t.ansi2 + "26")
           .font_semibold()
-          .text_color(t.done)
+          .text_color(t.ansi2)
           .child(`✓ ${pr.approvals} approbation${pr.approvals > 1 ? "s" : ""}`))));
   }
 
