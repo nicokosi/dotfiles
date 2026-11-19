@@ -51,8 +51,9 @@ export default class Prs extends View {
     });
   }
 
-  row(t, pr) {
+  row(t, pr, group) {
     const busy = this.opening.has(pr.url);
+    const approvals = group.id === "approved" ? ` · ${pr.approvals} approbation${pr.approvals > 1 ? "s" : ""}` : "";
     return v_flex()
       .id(`pr-${pr.url}`)
       .px(8)
@@ -63,7 +64,7 @@ export default class Prs extends View {
       .on_click((_e, cx) => this.open(pr, cx))
       .on_mouse_down("right", () => { exec("xdg-open", [pr.url]); })
       .child(div().text_size(12.8).text_color(t.foreground).truncate().child(pr.title))
-      .child(div().text_size(11).text_color(t.dim).truncate().child(busy ? `${pr.repo}#${pr.number} · ouverture…` : `${pr.repo}#${pr.number}`));
+      .child(div().text_size(11).text_color(t.dim).truncate().child(`${pr.repo}#${pr.number}${approvals}${busy ? " · ouverture…" : ""}`));
   }
 
   render(cx) {
@@ -102,7 +103,7 @@ export default class Prs extends View {
           div().px(8).pt(10).text_size(11).font_semibold().text_color(t.muted).child(s.title.toUpperCase()),
           ...s.groups.flatMap((g) => [
             div().px(8).pt(6).pb(2).text_size(11.5).text_color(t.accent).child(`${g.title} · ${g.prs.length}`),
-            ...g.prs.map((pr) => this.row(t, pr)),
+            ...g.prs.map((pr) => this.row(t, pr, g)),
           ]),
         ])));
   }
