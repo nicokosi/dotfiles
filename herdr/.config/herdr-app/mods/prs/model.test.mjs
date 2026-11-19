@@ -30,7 +30,8 @@ test("ready PRs split on approval, empty groups are dropped, order is fixed", ()
   assert.deepEqual(groups.find((g) => g.id === "approved").prs.map((p) => p.number), [2]);
   assert.deepEqual(groups.find((g) => g.id === "review-mine").prs.map((p) => p.number), [3, 4]);
   assert.deepEqual(groups.map((g) => g.section), ["mine", "mine", "mine", "contrib"]);
-  assert.deepEqual(groups[0].prs[0], { repo: "o/r", name: "r", number: 1, title: "PR 1", url: "https://github.com/o/r/pull/1", branch: "b1" });
+  assert.deepEqual(groups[0].prs[0], { repo: "o/r", name: "r", number: 1, title: "PR 1", url: "https://github.com/o/r/pull/1", branch: "b1", fork: false });
+  assert.equal(groupsFrom({ ready: search(node(9, { isCrossRepository: true })) })[0].prs[0].fork, true);
 });
 
 test("worktree path replaces slashes in the branch", () => {

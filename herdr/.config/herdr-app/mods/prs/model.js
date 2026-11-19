@@ -1,6 +1,6 @@
 // Pure logic of the pull requests panel: no import from "herdr", so Node can test it.
 
-const FIELDS = "nodes { ... on PullRequest { number title url isDraft reviewDecision headRefName updatedAt repository { name nameWithOwner } } }";
+const FIELDS = "nodes { ... on PullRequest { number title url isDraft reviewDecision headRefName isCrossRepository updatedAt repository { name nameWithOwner } } }";
 const ALIASES = ["drafts", "ready", "review", "assigned"];
 
 export const GRAPHQL = `query(${ALIASES.map((a) => `$${a}: String!`).join(", ")}) {
@@ -21,7 +21,7 @@ export function searchVariables(today) {
 
 const toPr = (n) => ({
   repo: n.repository.nameWithOwner, name: n.repository.name, number: n.number,
-  title: n.title, url: n.url, branch: n.headRefName,
+  title: n.title, url: n.url, branch: n.headRefName, fork: n.isCrossRepository === true,
 });
 
 export function groupsFrom(data) {

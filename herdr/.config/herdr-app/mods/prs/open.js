@@ -28,6 +28,8 @@ async function onGitHub(pr, deps, body) {
 }
 
 async function open(pr, deps) {
+  // A fork's branch name may match one of mine (main, master): any local lookup would show my code.
+  if (pr.fork) return onGitHub(pr, deps, "PR depuis un fork : ouverte sur GitHub");
   const space = spaceShowing(deps.spaces(), deps.panes(), pr.name, pr.branch);
   if (space) {
     deps.run("space.select", { id: space });

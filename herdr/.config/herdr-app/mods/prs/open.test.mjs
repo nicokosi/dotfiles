@@ -75,6 +75,14 @@ test("two simultaneous opens of the same PR run git once", async () => {
   assert.equal(d.runs.length, 1);
 });
 
+test("a PR from a fork goes to GitHub even when a local space shows a branch of that name", async () => {
+  const d = deps({ answers: clone, spaces: [{ id: "s1", folder: "/h/work/vira", branch: "feat/x", machine: null, tabs: [] }] });
+  assert.equal(await openPr({ ...pr, fork: true }, d), "github");
+  assert.match(d.notes[0].body, /fork/);
+  assert.deepEqual(d.runs, []);
+  assert.equal(d.calls.filter((c) => c.startsWith("git")).length, 0);
+});
+
 test("fetchGroups rejects with the first line of gh's error", async () => {
   const d = deps({ answers: { "gh api graphql": { code: 1, stdout: "", stderr: "gh: not logged in\nrun gh auth login" } } });
   await assert.rejects(fetchGroups(d), { message: "gh: not logged in" });
