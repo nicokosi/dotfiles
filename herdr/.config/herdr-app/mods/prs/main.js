@@ -53,7 +53,7 @@ export default class Prs extends View {
 
   row(t, pr, group) {
     const busy = this.opening.has(pr.url);
-    const approvals = group.id === "approved" ? ` · ${pr.approvals} approbation${pr.approvals > 1 ? "s" : ""}` : "";
+    const approved = group.id === "approved";
     return v_flex()
       .id(`pr-${pr.url}`)
       .px(8)
@@ -64,7 +64,18 @@ export default class Prs extends View {
       .on_click((_e, cx) => this.open(pr, cx))
       .on_mouse_down("right", () => { exec("xdg-open", [pr.url]); })
       .child(div().text_size(12.8).text_color(t.foreground).truncate().child(pr.title))
-      .child(div().text_size(11).text_color(t.dim).truncate().child(`${pr.repo}#${pr.number}${approvals}${busy ? " · ouverture…" : ""}`));
+      .child(h_flex()
+        .gap(6)
+        .text_size(11)
+        .child(div().text_color(t.dim).truncate().child(`${pr.repo}#${pr.number}${busy ? " · ouverture…" : ""}`))
+        .when(approved, (el) => el.child(div()
+          .flex_none()
+          .px(6)
+          .rounded(5)
+          .bg(t.done + "26")
+          .font_semibold()
+          .text_color(t.done)
+          .child(`✓ ${pr.approvals} approbation${pr.approvals > 1 ? "s" : ""}`))));
   }
 
   render(cx) {
