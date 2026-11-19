@@ -12,3 +12,6 @@ cache
 docker/dockersw2/*.pem
 
 git/gitconfig.symlink
+
+herdr/.config/herdr-app/mods/*/jsconfig.json
+herdr/.config/herdr-app/mods/*/gpui-kit.d.ts

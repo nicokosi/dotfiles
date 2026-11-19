@@ -57,6 +57,18 @@ stow --verbose --restow claude || {
   exit 1
 }
 
+# 4c. Stow herdr package (Herdr app mods and layouts)
+echo "→ Stowing herdr config..."
+mkdir -p ~/.config/herdr-app/mods ~/.config/herdr-app/layouts
+cd "$DOTFILES"
+stow --verbose --restow herdr || {
+  echo "ERROR: stow failed — a conflicting file already exists."
+  echo "Remove conflicting files under ~/.config/herdr-app/ then re-run."
+  echo "Or let stow take ownership (review diff after):"
+  echo "  stow --adopt herdr && git diff"
+  exit 1
+}
+
 # 5. Install fisher if not present
 if ! fish -c "type -q fisher" &>/dev/null; then
   echo "→ Installing fisher..."
