@@ -111,7 +111,8 @@ export default class Prs extends View {
         .overflow_y_scrollbar()
         .when(this.loaded && !sections.length, (el) => el.child(div().px(8).text_size(12).text_color(t.muted).child("Aucune PR")))
         .children(sections.flatMap((s) => [
-          div().px(8).pt(10).text_size(11).font_semibold().text_color(t.muted).child(s.title.toUpperCase()),
+          div().mx(4).mt(12).px(8).py(5).rounded(6).bg(t.raised).border_b(1).border_color(t.border)
+            .text_size(12.5).font_bold().text_color(t.foreground).child(s.title.toUpperCase()),
           ...s.groups.flatMap((g) => [
             div().px(8).pt(6).pb(2).text_size(11.5).text_color(t.accent).child(`${g.title} · ${g.prs.length}`),
             ...g.prs.map((pr) => this.row(t, pr, g)),
