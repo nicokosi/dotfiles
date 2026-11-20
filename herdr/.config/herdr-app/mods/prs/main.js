@@ -15,6 +15,7 @@ export default class Prs extends View {
     this.loading = false;
     this.loaded = false;
     this.opening = new Set();
+    this.collapsed = new Set();
     if (checking()) return;
     cx.timer.every(REFRESH_MS, (cx) => this.refresh(cx));
     this.refresh(cx);
@@ -78,6 +79,11 @@ export default class Prs extends View {
           .child(`✓ ${pr.approvals} approbation${pr.approvals > 1 ? "s" : ""}`))));
   }
 
+  toggle(key, cx) {
+    if (!this.collapsed.delete(key)) this.collapsed.add(key);
+    cx.notify();
+  }
+
   render(cx) {
     const t = theme();
     const sections = SECTIONS.map((s) => ({ ...s, groups: this.groups.filter((g) => g.section === s.id) })).filter((s) => s.groups.length);
@@ -111,12 +117,23 @@ export default class Prs extends View {
         .overflow_y_scrollbar()
         .when(this.loaded && !sections.length, (el) => el.child(div().px(8).text_size(12).text_color(t.muted).child("Aucune PR")))
         .children(sections.flatMap((s) => [
-          div().mx(4).mt(12).px(8).py(5).rounded(6).bg(t.raised).border_b(1).border_color(t.border)
-            .text_size(12.5).font_bold().text_color(t[s.color]).child(`${s.title.toUpperCase()} ${s.emoji}`),
-          ...s.groups.flatMap((g) => [
-            div().px(8).pt(6).pb(2).text_size(11.5).text_color(t.accent).child(`${g.title} · ${g.prs.length}`),
-            ...g.prs.map((pr) => this.row(t, pr, g)),
-          ]),
+          div().id(`section-${s.id}`).mx(4).mt(12).px(8).py(5).rounded(6).bg(t.raised).border_b(1).border_color(t.border)
+            .hover((st) => st.bg(t.hover))
+            .on_click((_e, cx) => this.toggle(s.id, cx))
+            .text_size(12.5).font_bold().text_color(t[s.color])
+            .child(`${this.collapsed.has(s.id) ? "▸" : "▾"} ${s.title.toUpperCase()} ${s.emoji}`),
+          ...(this.collapsed.has(s.id) ? [] : s.groups).flatMap((g) => {
+            const key = `${s.id}/${g.id}`;
+            const closed = this.collapsed.has(key);
+            return [
+              div().id(`group-${key}`).px(8).pt(6).pb(2).rounded(5)
+                .hover((st) => st.bg(t.hover))
+                .on_click((_e, cx) => this.toggle(key, cx))
+                .text_size(11.5).text_color(t.accent)
+                .child(`${closed ? "▸" : "▾"} ${g.title} · ${g.prs.length}`),
+              ...(closed ? [] : g.prs.map((pr) => this.row(t, pr, g))),
+            ];
+          }),
         ])));
   }
 }
