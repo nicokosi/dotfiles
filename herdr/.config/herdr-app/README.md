@@ -1,6 +1,6 @@
 # Herdr — antisèche
 
-Mémo pour se servir de l'app Herdr (Linux) avec **cette** config : le layout `nico`, les raccourcis de `keys.json` et le mod `prs`. La doc complète, réécrite par Herdr à chaque démarrage, est dans `AGENTS.md` (et `herdr-app --skill`).
+Mémo pour se servir de l'app Herdr (Linux) avec **cette** config : le layout `nico` et les raccourcis de `keys.json`. La doc complète, réécrite par Herdr à chaque démarrage, est dans `AGENTS.md` (et `herdr-app --skill`).
 
 ---
 
@@ -20,25 +20,21 @@ Les terminaux tournent dans **herdr-core** (`hc`), pas dans la fenêtre : fermer
 ## 2. L'écran (layout `nico`)
 
 ```
-┌─────────────┬──────────────────────────────────────┬────────────────┐
-│ Spaces      │ tabs …………………… + Files Changes       │ Pull requests  │
-│             ├──────────────────────────────────────┤ MES PR         │
-│             │                                      │  En cours      │
-│─────────────│     tab courant (ses panes)          │  En relecture  │
-│ Agents      │                                      │  Approuvées ✓  │
-│             │                                      │ JE CONTRIBUE   │
-│             │                                      │  Relecture dem.│
-│             │                                      │  Assignées     │
-├─────────────┴──────────────────────────────────────┴────────────────┤
-│ machine · branche · N agents                    Ctrl+Shift+P cmds   │
-└─────────────────────────────────────────────────────────────────────┘
+┌─────────────┬──────────────────────────────────────┐
+│ Spaces      │ tabs …………………… + Files Changes       │
+│             ├──────────────────────────────────────┤
+│             │                                      │
+│─────────────│     tab courant (ses panes)          │
+│ Agents      │                                      │
+├─────────────┴──────────────────────────────────────┤
+│ machine · branche · N agents   Ctrl+Shift+P cmds   │
+└────────────────────────────────────────────────────┘
 ```
 
 - **Sidebar** (`Ctrl+Shift+B` pour la replier) : les spaces, puis les agents de tous les spaces.
-- **Files / Changes** : panneau livré par Herdr, entre les terminaux et le panneau PR.
-- **Pull requests** (`Ctrl+Shift+R` pour le masquer) : le mod `prs`, voir §4.
+- **Files / Changes** : panneau livré par Herdr, à droite des terminaux.
 
-`nico` est un clone du layout `main` de Herdr : `Ctrl+Shift+L` passe d'un layout à l'autre, `main` n'a pas le panneau PR.
+`nico` est un clone du layout `main` de Herdr : `Ctrl+Shift+L` passe d'un layout à l'autre.
 
 ---
 
@@ -91,37 +87,19 @@ Les terminaux tournent dans **herdr-core** (`hc`), pas dans la fenêtre : fermer
 | Touche | Action |
 |---|---|
 | `Ctrl+Shift+B` | Replier / déplier la sidebar |
-| `Ctrl+Shift+R` | Masquer / afficher le panneau Pull requests |
 | `Ctrl+Shift+L` | Changer de layout |
 | `Ctrl+=` / `Ctrl+-` / `Ctrl+0` | Zoom + / − / normal |
 | `Ctrl+Alt+Shift+Échap` | **Secours** : remet le layout `main` et met `keys.json` de côté |
 
 ---
 
-## 4. Le panneau Pull requests (mod `prs`)
-
-Mes PR GitHub ouvertes, en deux sections :
-
-- **Mes PR** : *En cours* (brouillons `softwarevidal` actifs depuis 30 jours), *En relecture* (prêtes, sans approbation), *Approuvées* (badge vert avec le nombre d'approbations, une par relecteur).
-- **Je contribue** : *Relecture demandée* à moi, *Assignées* à moi.
-
-| Geste | Effet |
-|---|---|
-| Clic gauche | Va dans le space de la branche de la PR. Sinon crée un worktree dans `~/.herdr/worktrees/<repo>/<branche>` depuis le clone `~/work/<repo>` ou `~/perso/<repo>` et ouvre un space dessus (un shell, pas d'agent). Sans clone, ou PR venant d'un fork : toast et PR sur GitHub. |
-| Clic droit | La PR sur GitHub. |
-| Rafraîchir | Recharge tout de suite (sinon toutes les 5 min). |
-
-Données : un seul `gh api graphql`. Une erreur de `gh` s'affiche en rouge en tête, la liste précédente reste. Conception : `docs/specs/2026-11-19-herdr-pr-panel-design.md` à la racine des dotfiles.
-
----
-
-## 5. En ligne de commande
+## 4. En ligne de commande
 
 ```sh
 herdr-app ls                 # spaces, tabs, terminaux
 herdr-app status             # ce qui est à l'écran, erreurs des fichiers et des mods
 herdr-app commands           # toutes les commandes et leurs arguments
-herdr-app do layout.toggle '{"id":"prs"}'
+herdr-app do layout.toggle '{"id":"sidebar"}'
 herdr-app shot /tmp/herdr.png  # capture de la fenêtre
 
 hc ls                        # tous les terminaux de herdr-core
@@ -132,12 +110,12 @@ hc wait t3                   # attendre qu'un agent ait fini
 
 ---
 
-## 6. Personnaliser sans casser
+## 5. Personnaliser sans casser
 
-- **Où sont les fichiers** : `keys.json`, `layouts/nico.json` et `mods/prs/` sont dans le paquet stow `herdr` des dotfiles (`stow --restow herdr`, fait par `install.sh`). Le reste de `~/.config/herdr-app` appartient à Herdr.
+- **Où sont les fichiers** : `keys.json` et `layouts/nico.json` sont dans le paquet stow `herdr` des dotfiles (`stow --restow herdr`, fait par `install.sh`). Le reste de `~/.config/herdr-app` appartient à Herdr.
 - **Recharger un mod** : Herdr ne voit pas les modifications à travers le lien stow. Changer de layout et revenir :
   `herdr-app do layout.switch '{"name":"main"}' && herdr-app do layout.switch '{"name":"nico"}'`
-- **Vérifier un mod** : `herdr-app check ~/.config/herdr-app/mods/prs` et `node --test ~/.dotfiles/herdr/.config/herdr-app/mods/prs/`.
+- **Vérifier un mod** : `herdr-app check ~/.config/herdr-app/mods/<mod>`.
 - **Layout ou mod livré par Herdr** : ne jamais l'éditer (écrasé au démarrage), le cloner (`layout.clone`, `mod.clone`).
 - **Après le raccourci de secours** ou si Herdr réécrit `keys.json`, le lien stow devient un vrai fichier : `stow --adopt herdr && git diff`.
 - `gpui-kit.d.ts` et `jsconfig.json`, écrits par Herdr dans chaque mod, sont ignorés par git.

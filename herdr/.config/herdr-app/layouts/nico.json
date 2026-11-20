@@ -151,18 +151,6 @@
               "min": 280,
               "max": 900,
               "hidden": true
-            },
-            {
-              "id": "prs",
-              "type": "block",
-              "size": {
-                "px": 340
-              },
-              "min": 260,
-              "max": 700,
-              "content": {
-                "mod": "prs"
-              }
             }
           ],
           "padding": 8,
