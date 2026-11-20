@@ -5,7 +5,7 @@ import { exec, home, spaces, panes, run, notify, theme, checking } from "herdr";
 import { fetchGroups, openPr } from "./open.js";
 
 const REFRESH_MS = 300000;
-const SECTIONS = [{ id: "mine", title: "Mes PR" }, { id: "contrib", title: "Je contribue" }];
+const SECTIONS = [{ id: "mine", title: "Mes PR", emoji: "🙋", color: "ansi1" }, { id: "contrib", title: "Je contribue", emoji: "🤝", color: "ansi5" }];
 const deps = () => ({ exec, home: home(), spaces, panes, run, notify });
 
 export default class Prs extends View {
@@ -112,7 +112,7 @@ export default class Prs extends View {
         .when(this.loaded && !sections.length, (el) => el.child(div().px(8).text_size(12).text_color(t.muted).child("Aucune PR")))
         .children(sections.flatMap((s) => [
           div().mx(4).mt(12).px(8).py(5).rounded(6).bg(t.raised).border_b(1).border_color(t.border)
-            .text_size(12.5).font_bold().text_color(t.foreground).child(s.title.toUpperCase()),
+            .text_size(12.5).font_bold().text_color(t[s.color]).child(`${s.title.toUpperCase()} ${s.emoji}`),
           ...s.groups.flatMap((g) => [
             div().px(8).pt(6).pb(2).text_size(11.5).text_color(t.accent).child(`${g.title} · ${g.prs.length}`),
             ...g.prs.map((pr) => this.row(t, pr, g)),
