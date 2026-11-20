@@ -46,6 +46,7 @@ Les terminaux tournent dans **herdr-core** (`hc`), pas dans la fenêtre : fermer
 |---|---|
 | `Ctrl+Shift+P` | Palette de commandes |
 | `Ctrl+Shift+K` | Picker : aller à un tab, un space ou un agent |
+| `Ctrl+Shift+J` | Commencer un travail (mod `start-work` du harnais) : ticket Jira, issue ou PR → branche, worktree, space avec Claude |
 | `Ctrl+Shift+?` | Aide de Herdr |
 | `Ctrl+,` | Réglages |
 
