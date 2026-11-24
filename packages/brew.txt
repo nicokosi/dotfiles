@@ -1,13 +1,14 @@
+atlassian/acli/acli
 avivsinai/tap/jk
 bat
 diff-so-fancy
 diskonaut
+dive
 docker
 docker-agent
 docker-buildx
 docker-engine
 eza
-ffmpeg
 fisher
 fzf
 gcc
@@ -41,6 +42,7 @@ the_silver_searcher
 tig
 tldr
 tree
+vhs
 volta
 worktrunk
 zoxide
