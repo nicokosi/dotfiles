@@ -151,6 +151,18 @@
               "min": 280,
               "max": 900,
               "hidden": true
+            },
+            {
+              "id": "pr-agents",
+              "type": "block",
+              "content": {
+                "mod": "pr-agents"
+              },
+              "size": {
+                "px": 420
+              },
+              "min": 320,
+              "max": 900
             }
           ],
           "padding": 8,
